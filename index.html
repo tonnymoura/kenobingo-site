@@ -21,7 +21,10 @@
     <!-- Header (Topo fixo) -->
     <header class="header">
         <div class="container">
-            <a href="#" class="logo">Kenobingo</a>
+            <!-- Usando a imagem KENOBINGO.jpg como logo -->
+            <a href="#home" class="logo">
+                <img src="KENOBINGO.jpg" alt="Logo Kenobingo" style="height: 40px;"> <!-- Ajuste o height conforme necessário -->
+            </a>
             <nav class="nav-menu">
                 <ul class="nav-list">
                     <li><a href="#home">Início</a></li>
@@ -30,6 +33,12 @@
                     <li><a href="#results">Resultados</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
+                <!-- Ícones de mídias sociais no header para acesso rápido -->
+                <div class="header-social-icons">
+                    <a href="https://www.twitch.tv/livekenobingo" target="_blank" aria-label="Assista nossa Live na Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://www.youtube.com/@kenobingo4641" target="_blank" aria-label="Canal Kenobingo no YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/kenobingo_/" target="_blank" aria-label="Instagram Kenobingo Oficial"><i class="fab fa-instagram"></i></a>
+                </div>
                 <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary header-btn">Jogar Agora</a>
             </nav>
             <button class="hamburger-menu" aria-label="Abrir menu">
@@ -50,16 +59,27 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/500x400/8e44ad/ffffff?text=Kenobingo+Online" alt="Ilustração de jogos Kenobingo">
+                <!-- Usando a imagem KENOBINGO.jpg como imagem principal na hero section -->
+                <img src="KENOBINGO.jpg" alt="Ilustração de jogos Kenobingo" style="border-radius: 10px;">
             </div>
         </div>
     </section>
 
-    <!-- Seção "Como Funciona" -->
+    <!-- Seção "Como Funciona" (com vídeo) -->
     <section id="how-it-works" class="how-it-works-section">
         <div class="container">
             <h2>É Fácil Começar a Jogar!</h2>
             <p class="section-description">Siga estes passos simples e mergulhe na diversão do Kenobingo.</p>
+
+            <!-- Vídeo Explicativo -->
+            <div class="video-container">
+                <video controls autoplay muted loop playsinline>
+                    <source src="CELULAR.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <!-- Removido o link do YouTube para o vídeo, conforme solicitado -->
+            </div>
+
             <div class="steps-grid">
                 <div class="step-card">
                     <i class="fas fa-user-plus icon-large"></i>
@@ -169,11 +189,12 @@
                             <td>23/03/2026</td>
                             <td>03, 11, 22, 31, 40</td>
                             <td>Fernanda G.</td>
-                            <td>R$ 1.000</td>
+                            <td>R$ 1.650</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <a href="#" class="btn-secondary" style="margin-top: 30px;">Ver Todos os Resultados</a>
         </div>
     </section>
 
@@ -181,20 +202,20 @@
     <section class="testimonials-section">
         <div class="container">
             <h2>O Que Nossos Jogadores Dizem</h2>
-            <p class="section-description">A satisfação dos nossos usuários é a nossa maior recompensa.</p>
+            <p class="section-description">A satisfação dos nossos usuários é a nossa maior vitória!</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80x80/74b9ff/ffffff?text=J1" alt="Foto de perfil do jogador 1">
+                    <!-- Removida a imagem de perfil, conforme solicitado -->
                     <p>"Kenobingo é viciante! A interface é linda e os jogos são super justos. Já ganhei algumas vezes!"</p>
                     <h4>João Silva</h4>
                 </div>
                 <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80x80/a29bfe/ffffff?text=J2" alt="Foto de perfil do jogador 2">
+                    <!-- Removida a imagem de perfil, conforme solicitado -->
                     <p>"Adoro a variedade de jogos e a facilidade de sacar os prêmios. Recomendo a todos!"</p>
                     <h4>Maria Oliveira</h4>
                 </div>
                 <div class="testimonial-card">
-                    <img src="https://via.placeholder.com/80x80/fd79a8/ffffff?text=J3" alt="Foto de perfil do jogador 3">
+                    <!-- Removida a imagem de perfil, conforme solicitado -->
                     <p>"O suporte é excelente e as promoções são sempre muito boas. Kenobingo é top!"</p>
                     <h4>Pedro Costa</h4>
                 </div>
@@ -225,21 +246,25 @@
                 <div class="contact-item">
                     <i class="fab fa-whatsapp icon-small"></i>
                     <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/5586999103011" target="_blank">(86) 99910-3011</a></p>
+                    <p><a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank">Grupo Kenobingo</a></p>
+                    <p>(86) 99910-3011</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram-plane icon-small"></i>
+                    <h3>Telegram</h3>
+                    <p><a href="https://t.me/kenobingo" target="_blank">Canal Kenobingo</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope icon-small"></i>
                     <h3>E-mail</h3>
-                    <p><a href="mailto:contato@kenobingo.com">contato@kenobingo.com</a></p>
+                    <p><a href="mailto:livekenobingo@gmail.com">livekenobingo@gmail.com</a></p> <!-- E-mail atualizado aqui -->
                 </div>
             </div>
-            <!-- Um formulário de contato simples pode ser adicionado aqui, se desejar, usando Netlify Forms -->
-            <!-- <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                <input type="text" name="name" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu E-mail" required>
-                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit" class="btn-primary">Enviar Mensagem</button>
-            </form> -->
+            <!-- Imagem "Seja nosso parceiro" sem os números de telefone -->
+            <div class="partner-cta">
+                <img src="SEJA_NOSSO_PARCEIRO.jpg" alt="Seja nosso parceiro Kenobingo" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 50px;">
+                <p style="margin-top: 20px; font-size: 1.2em; color: var(--primary-color);">Entre em contato para parcerias!</p>
+            </div>
         </div>
     </section>
 
@@ -264,9 +289,13 @@
                 <div class="footer-col">
                     <h3>Redes Sociais</h3>
                     <div class="social-icons">
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitch.tv/livekenobingo" target="_blank" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                        <a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank" aria-label="WhatsApp Group"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/kenobingo" target="_blank" aria-label="Telegram Channel"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://www.youtube.com/@kenobingo4641" target="_blank" aria-label="YouTube Kenobingo Oficial"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@livekenobingo" target="_blank" aria-label="YouTube Live Kenobingo"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/kenobingo_/" target="_blank" aria-label="Instagram Kenobingo Oficial"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/kenobingolive/" target="_blank" aria-label="Instagram Kenobingo Live"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
