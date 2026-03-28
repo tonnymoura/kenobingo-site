@@ -3,167 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Mundo Kenobingo!</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #0056b3;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-        p {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        .links-section {
-            background-color: #e9f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 25px;
-        }
-        .links-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .links-list li {
-            margin-bottom: 5px;
-        }
-        .links-list a {
-            display: block;
-            background-color: #28a745; /* Cor verde para os botões */
-            color: white;
-            padding: 12px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-weight: bold;
-            font-size: 1.05em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .links-list a:hover {
-            background-color: #218838; /* Verde mais escuro no hover */
-            transform: translateY(-2px);
-        }
-        .contact-info {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-        }
-        .contact-info p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .whatsapp-link {
-            display: inline-block;
-            background-color: #25d366; /* Cor do WhatsApp */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .whatsapp-link:hover {
-            background-color: #1da851;
-            transform: translateY(-2px);
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
+    <title>Kenobingo - Sua Plataforma de Jogos Online</title>
+    <meta name="description" content="Kenobingo: A melhor plataforma de jogos online. Divirta-se com nossos jogos, veja resultados e aproveite promoções exclusivas. Jogue agora!">
+    <meta name="keywords" content="Kenobingo, jogos online, bingo, jogar bingo, resultados bingo, plataforma de jogos, diversão online">
+    <meta name="author" content="Kenobingo">
 
-        /* Responsividade básica */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .container {
-                padding: 20px;
-                margin: 10px auto;
-            }
-            .links-list {
-                grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
-            }
-        }
-    </style>
+    <!-- Google Fonts - Poppins e Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones Font Awesome (para ícones modernos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Bem-vindo ao Mundo Kenobingo!</h1>
+    <!-- Header (Topo fixo) -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Kenobingo</a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#games">Jogos</a></li>
+                    <li><a href="#results">Resultados</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary header-btn">Jogar Agora</a>
+            </nav>
+            <button class="hamburger-menu" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-        <section>
-            <h2>Kenobingo: Diversão e Emoção ao Seu Alcance!</h2>
-            <p>Desde a sua concepção, a Kenobingo nasceu com um propósito claro: levar alegria e a emoção dos jogos de bingo para a palma da sua mão, onde quer que você esteja. Com uma paixão por entretenimento e a visão de conectar pessoas através da diversão, a Kenobingo se estabeleceu como um ponto de encontro para quem busca momentos de lazer e a chance de grandes prêmios. Nossa jornada é construída na confiança, na inovação e, acima de tudo, na experiência inesquecível que proporcionamos a cada jogador. Junte-se à nossa comunidade e descubra por que a Kenobingo é mais do que um jogo, é uma experiência!</p>
-        </section>
+    <!-- Hero Section (Primeira dobra) -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sua Emoção Começa Aqui: Kenobingo Online!</h1>
+                <p class="subtitle">Descubra a adrenalina dos jogos de bingo online. Diversão garantida, prêmios incríveis e uma comunidade vibrante esperam por você.</p>
+                <div class="hero-buttons">
+                    <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary">Começar Agora</a>
+                    <a href="#results" class="btn-secondary">Ver Resultados</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400/8e44ad/ffffff?text=Kenobingo+Online" alt="Ilustração de jogos Kenobingo">
+            </div>
+        </div>
+    </section>
 
-        <section class="links-section">
-            <h2>Jogue Agora! Seus Links Kenobingo 100% Online!</h2>
-            <p>Prepare-se para a diversão! Abaixo, você encontra todos os nossos links diretos para começar a jogar Kenobingo. Escolha o seu favorito e mergulhe na emoção dos nossos jogos online. É fácil, rápido e a diversão é garantida!</p>
-            <ul class="links-list">
-                <li><a href="https://agelimbar.123client.net" target="_blank">Agelimbar</a></li>
-                <li><a href="https://bardafranca.123client.net" target="_blank">Bar da França</a></li>
-                <li><a href="https://bardarisoleta.123client.net" target="_blank">Bar da Risoleta</a></li>
-                <li><a href="https://bardascoleguinhass.123client.net" target="_blank">Bar das Coleguinhas</a></li>
-                <li><a href="https://barcareca.123client.net" target="_blank">Bar Careca</a></li>
-                <li><a href="https://bardonacruz.123client.net" target="_blank">Bar do Na Cruz</a></li>
-                <li><a href="https://baxinhalanches.123client.net" target="_blank">Baxinha Lanches</a></li>
-                <li><a href="https://espacodoiran.123client.net" target="_blank">Espaço do Iran</a></li>
-                <li><a href="https://estreladasorte.123client.net" target="_blank">Estrela da Sorte</a></li>
-                <li><a href="https://kenobingo.123client.net" target="_blank">Kenobingo Oficial</a></li>
-                <li><a href="https://kenodalili.123client.net" target="_blank">Keno da Lili</a></li>
-                <li><a href="https://lanchonetedalala.123client.net" target="_blank">Lanchonete da Lala</a></li>
-                <li><a href="https://pointdaju.123client.net" target="_blank">Point da Ju</a></li>
-                <li><a href="https://povoadodelgado.123client.net" target="_blank">Povoado Delgado</a></li>
-                <li><a href="https://saocipriano.123client.2026" target="_blank">São Cipriano</a></li>
-                <li><a href="https://thaynara.123client.net" target="_blank">Thaynara</a></li>
-                <li><a href="https://tiabina.123client.net" target="_blank">Tia Bina</a></li>
-            </ul>
-        </section>
+    <!-- Seção "Como Funciona" -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <h2>É Fácil Começar a Jogar!</h2>
+            <p class="section-description">Siga estes passos simples e mergulhe na diversão do Kenobingo.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <i class="fas fa-user-plus icon-large"></i>
+                    <h3>1. Cadastre-se</h3>
+                    <p>Crie sua conta de forma rápida e segura. Leva apenas alguns minutos!</p>
+                </div>
+                <div class="step-card">
+                    <i class="fas fa-wallet icon-large"></i>
+                    <h3>2. Faça um Depósito</h3>
+                    <p>Escolha seu método de pagamento preferido e adicione créditos para jogar.</p>
+                </div>
+                <div class="step-card">
+                    <i class="fas fa-gamepad icon-large"></i>
+                    <h3>3. Escolha seu Jogo</h3>
+                    <p>Explore nossa variedade de jogos e encontre seu favorito para começar a diversão.</p>
+                </div>
+                <div class="step-card">
+                    <i class="fas fa-trophy icon-large"></i>
+                    <h3>4. Ganhe Prêmios!</h3>
+                    <p>Acerte os números e celebre suas vitórias com nossos prêmios incríveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="contact-info">
-            <h2>Dúvidas? Fale Conosco!</h2>
-            <p>Precisa de ajuda ou tem alguma pergunta? Entre em contato conosco! Estamos aqui para te ajudar a ter a melhor experiência Kenobingo.</p>
-            <p><strong>WhatsApp:</strong> (86) 99910-3011</p>
-            <a href="https://wa.me/5586999103011" target="_blank" class="whatsapp-link">Enviar Mensagem no WhatsApp</a>
-        </section>
+    <!-- Seção de Jogos -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2>Nossos Jogos Exclusivos</h2>
+            <p class="section-description">Uma seleção de jogos para todos os gostos. Escolha o seu e comece a jogar!</p>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/6c5ce7/ffffff?text=Agelimbar" alt="Jogo Agelimbar">
+                    <h3>Agelimbar</h3>
+                    <p>Um clássico com novas emoções. Teste sua sorte e estratégia!</p>
+                    <a href="https://agelimbar.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/a29bfe/ffffff?text=Bar+da+Franca" alt="Jogo Bar da França">
+                    <h3>Bar da França</h3>
+                    <p>Ambiente sofisticado e prêmios que te levam a Paris!</p>
+                    <a href="https://bardafranca.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/fd79a8/ffffff?text=Estrela+da+Sorte" alt="Jogo Estrela da Sorte">
+                    <h3>Estrela da Sorte</h3>
+                    <p>Brilhe e conquiste grandes jackpots neste jogo estelar.</p>
+                    <a href="https://estreladasorte.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="game-card">
+                    <img src="https://via.placeholder.com/300x200/00cec9/ffffff?text=Kenobingo+Oficial" alt="Jogo Kenobingo Oficial">
+                    <h3>Kenobingo Oficial</h3>
+                    <p>A experiência original e mais completa do Kenobingo.</p>
+                    <a href="https://kenobingo.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2026 Kenobingo. Todos os direitos reservados.</p>
-        </footer>
-    </div>
+    <!-- Seção de Resultados -->
+    <section id="results" class="results-section">
+        <div class="container">
+            <h2>Resultados Recentes</h2>
+            <p class="section-description">Confira os últimos sorteios e veja quem foram os grandes vencedores!</p>
+            <div class="results-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jogo</th>
+                            <th>Data</th>
+                            <th>Números Sorteados</th>
+                            <th>Vencedor</th>
+                            <th>Prêmio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Agelimbar</td>
+                            <td>27/03/2026</td>
+                            <td>05, 12, 23, 30, 41</td>
+                            <td>Maria S.</td>
+                            <td>R$ 1.500</td>
+                        </tr>
+                        <tr>
+                            <td>Bar da França</td>
+                            <td>26/03/2026</td>
+                            <td>02, 18, 25, 33, 45</td>
+                            <td>João P.</td>
+                            <td>R$ 2.200</td>
+                        </tr>
+                        <tr>
+                            <td>Estrela da Sorte</td>
+                            <td>25/03/2026</td>
+                            <td>01, 10, 20, 35, 49</td>
+                            <td>Ana L.</td>
+                            <td>R$ 3.000</td>
+                        </tr>
+                        <tr>
+                            <td>Kenobingo Oficial</td>
+                            <td>24/03/2026</td>
+                            <td>07, 15, 28, 39, 42</td>
+                            <td>Carlos R.</td>
+                            <td>R$ 1.800</td>
+                        </tr>
+                        <tr>
+                            <td>Agelimbar</td>
+                            <td>23/03/2026</td>
+                            <td>03, 11, 22, 31, 40</td>
+                            <td>Fernanda G.</td>
+                            <td>R$ 1.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>O Que Nossos Jogadores Dizem</h2>
+            <p class="section-description">A satisfação dos nossos usuários é a nossa maior recompensa.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80/74b9ff/ffffff?text=J1" alt="Foto de perfil do jogador 1">
+                    <p>"Kenobingo é viciante! A interface é linda e os jogos são super justos. Já ganhei algumas vezes!"</p>
+                    <h4>João Silva</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80/a29bfe/ffffff?text=J2" alt="Foto de perfil do jogador 2">
+                    <p>"Adoro a variedade de jogos e a facilidade de sacar os prêmios. Recomendo a todos!"</p>
+                    <h4>Maria Oliveira</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80/fd79a8/ffffff?text=J3" alt="Foto de perfil do jogador 3">
+                    <p>"O suporte é excelente e as promoções são sempre muito boas. Kenobingo é top!"</p>
+                    <h4>Pedro Costa</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA (Call to Action) -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Não Perca Mais Tempo!</h2>
+            <p>Junte-se à comunidade Kenobingo e comece a sua jornada de diversão e grandes prêmios hoje mesmo.</p>
+            <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary btn-large">Jogue Agora na Kenobingo!</a>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p class="section-description">Tem dúvidas, sugestões ou precisa de suporte? Estamos aqui para ajudar!</p>
+            <div class="contact-info-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt icon-small"></i>
+                    <h3>Telefone</h3>
+                    <p>(86) 99910-3011</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp icon-small"></i>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/5586999103011" target="_blank">(86) 99910-3011</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope icon-small"></i>
+                    <h3>E-mail</h3>
+                    <p><a href="mailto:contato@kenobingo.com">contato@kenobingo.com</a></p>
+                </div>
+            </div>
+            <!-- Um formulário de contato simples pode ser adicionado aqui, se desejar, usando Netlify Forms -->
+            <!-- <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kenobingo</h3>
+                    <p>Sua plataforma de jogos online, onde a diversão e a emoção se encontram. Jogue com responsabilidade.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#how-it-works">Como Funciona</a></li>
+                        <li><a href="#games">Jogos</a></li>
+                        <li><a href="#results">Resultados</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kenobingo. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
