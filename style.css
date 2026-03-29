@@ -22,15 +22,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--background-light);
 }
 
 .container {
@@ -41,21 +37,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--text-color);
+    color: var(--primary-color);
     line-height: 1.2;
 }
 
-h1 {
-    font-size: 3.5em;
-    color: var(--primary-color);
-}
-
-h2 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; text-align: center; margin-bottom: 20px; }
+h3 { font-size: 1.5em; }
 
 .section-description {
     text-align: center;
@@ -67,25 +55,16 @@ h2 {
     margin-right: auto;
 }
 
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Botões */
 .btn-primary, .btn-secondary, .btn-game {
     display: inline-block;
     padding: 12px 25px;
-    border-radius: 50px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: 600;
-    text-align: center;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Evita quebra de linha em botões */
+    text-align: center;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -95,8 +74,8 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: #7a3a99; /* Tom mais escuro do roxo */
-    border-color: #7a3a99;
+    background-color: #7b3799; /* Um roxo um pouco mais escuro */
+    border-color: #7b3799;
     transform: translateY(-2px);
 }
 
@@ -113,24 +92,23 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-large {
+    padding: 15px 35px;
+    font-size: 1.1em;
+}
+
 .btn-game {
     background-color: var(--secondary-color);
     color: var(--white);
     border: 2px solid var(--secondary-color);
-    padding: 10px 20px;
     font-size: 0.9em;
-    margin-top: 15px;
+    padding: 8px 18px;
 }
 
 .btn-game:hover {
-    background-color: #2a81bb;
-    border-color: #2a81bb;
+    background-color: #2980b9;
+    border-color: #2980b9;
     transform: translateY(-2px);
-}
-
-.btn-large {
-    padding: 15px 40px;
-    font-size: 1.1em;
 }
 
 /* Header */
@@ -140,8 +118,6 @@ img {
     padding: 15px 0;
     position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-medium);
 }
@@ -153,35 +129,37 @@ img {
 }
 
 .logo {
+    font-family: var(--font-heading);
     font-size: 1.8em;
     font-weight: 700;
     color: var(--white);
+    text-decoration: none;
     display: flex; /* Para alinhar a imagem do logo */
     align-items: center;
 }
 
 .logo img {
-    height: 40px; /* Altura padrão para o logo */
-    margin-right: 10px; /* Espaço entre a imagem e o texto (se houver) */
+    height: 40px; /* Ajuste conforme necessário */
+    margin-right: 10px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
+    margin-right: 20px;
 }
 
 .nav-list a {
     color: var(--white);
+    text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
-    padding: 5px 0;
 }
 
 .nav-list a:hover {
@@ -213,7 +191,7 @@ img {
 .header-social-icons a.fa-twitch:hover, .social-icons a.fa-twitch:hover {
     color: #9146FF; /* Cor da Twitch */
 }
-.header-social-icons a.fa-youtube:hover, .social-icons a.fa-youtube:hover {
+.header-social-icons a.fa-youtube:hover, .social-icons a.fa-youtube:hover, .youtube-link:hover {
     color: #FF0000; /* Cor do YouTube */
 }
 .header-social-icons a.fa-instagram:hover, .social-icons a.fa-instagram:hover {
@@ -237,7 +215,7 @@ img {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, #a262c2, var(--primary-color));
+    background: linear-gradient(to right, var(--primary-color), #a262c2);
     color: var(--white);
     padding: 100px 0;
 }
@@ -254,9 +232,8 @@ img {
 }
 
 .hero-content h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
     color: var(--white);
+    margin-bottom: 20px;
 }
 
 .hero-content .subtitle {
@@ -272,7 +249,7 @@ img {
 
 .hero-image {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .hero-image img {
@@ -286,21 +263,46 @@ img {
 .how-it-works-section {
     padding: 80px 0;
     background-color: var(--white);
+    text-align: center;
 }
 
 /* Estilo para o container do vídeo */
 .video-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 50px auto 20px auto; /* Ajustado para dar espaço ao caption */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px var(--shadow-medium);
+    position: relative;
+}
+
+.video-container .video-link-wrapper {
+    display: block; /* Faz o link envolver todo o vídeo */
+    line-height: 0; /* Remove espaço extra abaixo do vídeo */
 }
 
 .video-container video {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.video-caption .youtube-link {
+    color: var(--accent-color); /* Cor de destaque para o link */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.video-caption .youtube-link i {
+    margin-right: 5px;
 }
 
 .steps-grid {
@@ -335,10 +337,15 @@ img {
     margin-bottom: 10px;
 }
 
+.step-card p {
+    color: var(--light-text-color);
+}
+
 /* Seção de Jogos */
 .games-section {
     background-color: var(--background-light);
     padding: 80px 0;
+    text-align: center;
 }
 
 .games-grid {
@@ -348,13 +355,22 @@ img {
     margin-top: 50px;
 }
 
+.game-card-link {
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Herda a cor do texto */
+}
+
 .game-card {
     background-color: var(--white);
+    padding: 30px 0; /* Ajustado para remover padding lateral da imagem */
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 5px 20px var(--shadow-light);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .game-card:hover {
@@ -362,11 +378,17 @@ img {
     box-shadow: 0 10px 30px var(--shadow-medium);
 }
 
+/* Removido o estilo para a imagem do jogo */
+/*
 .game-card img {
-    width: 100%;
+    max-width: 100%;
     height: 200px;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
 }
+*/
 
 .game-card h3 {
     margin-top: 20px;
@@ -378,10 +400,66 @@ img {
     padding: 0 20px;
     margin-bottom: 20px;
     color: var(--light-text-color);
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
 }
 
 .game-card .btn-game {
     margin-bottom: 20px;
+    align-self: center; /* Centraliza o botão */
+}
+
+/* Seção de Resultados */
+.results-section {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+
+.results-table-container {
+    overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
+    margin-top: 50px;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px; /* Limita a largura da tabela */
+}
+
+.results-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+}
+
+.results-section th, .results-section td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.results-section th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.results-section tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-section tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.view-all-results {
+    margin-top: 40px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Seção de Depoimentos */
@@ -709,5 +787,9 @@ img {
 
     .btn-secondary {
         margin-left: 0;
+    }
+
+    .results-section table {
+        font-size: 0.9em;
     }
 }
