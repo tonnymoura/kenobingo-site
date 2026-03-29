@@ -22,7 +22,7 @@
     <!-- Header (Topo fixo) -->
     <header class="header">
         <div class="container">
-            <!-- Usando a imagem LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg como logo -->
+            <!-- Usando a nova imagem LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg como logo -->
             <a href="#home" class="logo">
                 <img src="LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg" alt="Logo Kenobingo" style="height: 40px;"> <!-- Ajuste o height conforme necessário -->
             </a>
@@ -60,24 +60,31 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Usando a imagem LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg como imagem principal na hero section -->
+                <!-- Usando a nova imagem LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg como imagem principal na hero section -->
                 <img src="LOGOMARCA__KENO_BINGO_EDITAVEL_EM_PDF_page0001.jpg" alt="Ilustração de jogos Kenobingo" style="border-radius: 10px;">
             </div>
         </div>
     </section>
 
-    <!-- Seção "Como Funciona" (com vídeo TV.mp4) -->
+    <!-- Seção "Como Funciona" (com vídeo e link para YouTube) -->
     <section id="how-it-works" class="how-it-works-section">
         <div class="container">
             <h2>É Fácil Começar a Jogar!</h2>
             <p class="section-description">Siga estes passos simples e mergulhe na diversão do Kenobingo.</p>
 
-            <!-- Vídeo Explicativo -->
+            <!-- Vídeo Explicativo com link para o YouTube -->
             <div class="video-container">
-                <video controls autoplay muted loop playsinline>
-                    <source src="TV.mp4" type="video/mp4"> <!-- ALTERADO AQUI: de CELULAR.mp4 para TV.mp4 -->
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
+                <a href="https://youtu.be/O-4fLI86USc?si=MiqLf3pZBpETnElo" target="_blank" class="video-link-wrapper" aria-label="Assista o vídeo no YouTube">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="TV.mp4" type="video/mp4"> <!-- Nome do vídeo atualizado para TV.mp4 -->
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </a>
+                <p class="video-caption">
+                    <a href="https://youtu.be/O-4fLI86USc?si=MiqLf3pZBpETnElo" target="_blank" class="youtube-link">
+                        <i class="fab fa-youtube"></i> Assista este vídeo no YouTube!
+                    </a>
+                </p>
             </div>
 
             <div class="steps-grid">
@@ -111,30 +118,53 @@
             <h2>Nossos Jogos Exclusivos</h2>
             <p class="section-description">Uma seleção de jogos para todos os gostos. Escolha o seu e comece a jogar!</p>
             <div class="games-grid">
-                <div class="game-card">
-                    <img src="https://via.placeholder.com/300x200/6c5ce7/ffffff?text=Agelimbar" alt="Jogo Agelimbar">
-                    <h3>Agelimbar</h3>
-                    <p>Um clássico com novas emoções. Teste sua sorte e estratégia!</p>
-                    <a href="https://agelimbar.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="game-card">
-                    <img src="https://via.placeholder.com/300x200/a29bfe/ffffff?text=Bar+da+Franca" alt="Jogo Bar da França">
-                    <h3>Bar da França</h3>
-                    <p>Ambiente sofisticado e prêmios que te levam a Paris!</p>
-                    <a href="https://bardafranca.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="game-card">
-                    <img src="https://via.placeholder.com/300x200/fd79a8/ffffff?text=Estrela+da+Sorte" alt="Jogo Estrela da Sorte">
-                    <h3>Estrela da Sorte</h3>
-                    <p>Brilhe e conquiste grandes jackpots neste jogo estelar.</p>
-                    <a href="https://estreladasorte.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="game-card">
-                    <img src="https://via.placeholder.com/300x200/00cec9/ffffff?text=Kenobingo+Oficial" alt="Jogo Kenobingo Oficial">
-                    <h3>Kenobingo Oficial</h3>
-                    <p>A experiência original e mais completa do Kenobingo.</p>
-                    <a href="https://kenobingo.123client.net" target="_blank" class="btn-game">Acessar <i class="fas fa-arrow-right"></i></a>
-                </div>
+                <!-- Card de Jogo - Agelimbar -->
+                <a href="https://agelimbar.123client.net" target="_blank" class="game-card-link">
+                    <div class="game-card">
+                        <!-- Imagem removida, o card inteiro é clicável -->
+                        <h3>Agelimbar</h3>
+                        <p>Um clássico com novas emoções. Teste sua sorte e estratégia!</p>
+                        <span class="btn-game">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Card de Jogo - Bar da França -->
+                <a href="https://bardafranca.123client.net" target="_blank" class="game-card-link">
+                    <div class="game-card">
+                        <!-- Imagem removida, o card inteiro é clicável -->
+                        <h3>Bar da França</h3>
+                        <p>Ambiente sofisticado e prêmios que te levam a Paris!</p>
+                        <span class="btn-game">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Card de Jogo - Estrela da Sorte -->
+                <a href="https://estreladasorte.123client.net" target="_blank" class="game-card-link">
+                    <div class="game-card">
+                        <!-- Imagem removida, o card inteiro é clicável -->
+                        <h3>Estrela da Sorte</h3>
+                        <p>Brilhe e conquiste grandes jackpots neste jogo estelar.</p>
+                        <span class="btn-game">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Card de Jogo - Kenobingo Oficial -->
+                <a href="https://kenobingo.123client.net" target="_blank" class="game-card-link">
+                    <div class="game-card">
+                        <!-- Imagem removida, o card inteiro é clicável -->
+                        <h3>Kenobingo Oficial</h3>
+                        <p>A experiência original e mais completa do Kenobingo.</p>
+                        <span class="btn-game">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <!-- Adicione mais cards de jogos aqui, seguindo o mesmo padrão -->
+                <!-- Exemplo de um novo card: -->
+                <!--
+                <a href="https://seujogonovo.123client.net" target="_blank" class="game-card-link">
+                    <div class="game-card">
+                        <h3>Nome do Novo Jogo</h3>
+                        <p>Uma descrição cativante para o seu novo jogo.</p>
+                        <span class="btn-game">Acessar <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                -->
             </div>
         </div>
     </section>
@@ -206,8 +236,8 @@
                     <h4>Maria Oliveira</h4>
                 </div>
                 <div class="testimonial-card">
-                    <p>"O suporte é excelente e as promoções são sempre muito boas. Kenobingo é top!"</p>
-                    <h4>Pedro Costa</h4>
+                    <p>"Excelente plataforma, sempre com novidades e um suporte muito atencioso. Parabéns!"</p>
+                    <h4>Pedro Souza</h4>
                 </div>
             </div>
         </div>
@@ -216,9 +246,9 @@
     <!-- CTA (Call to Action) -->
     <section class="cta-section">
         <div class="container">
-            <h2>Não Perca Mais Tempo!</h2>
-            <p>Junte-se à comunidade Kenobingo e comece a sua jornada de diversão e grandes prêmios hoje mesmo.</p>
-            <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary btn-large">Jogue Agora na Kenobingo!</a>
+            <h2>Pronto para a Diversão?</h2>
+            <p>Junte-se à comunidade Kenobingo e comece a ganhar prêmios incríveis hoje mesmo!</p>
+            <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary btn-large">Jogar Agora!</a>
         </div>
     </section>
 
@@ -226,18 +256,17 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Fale Conosco</h2>
-            <p class="section-description">Tem dúvidas, sugestões ou precisa de suporte? Estamos aqui para ajudar!</p>
+            <p class="section-description">Estamos aqui para ajudar! Entre em contato conosco.</p>
             <div class="contact-info-grid">
                 <div class="contact-item">
-                    <i class="fab fa-whatsapp icon-small"></i>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank">Grupo Kenobingo</a></p>
-                    <p>(86) 99910-3011</p>
+                    <i class="fas fa-map-marker-alt icon-small"></i>
+                    <h3>Endereço</h3>
+                    <p>Rua Exemplo, 123 - Cidade, Estado</p>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-telegram-plane icon-small"></i>
-                    <h3>Telegram</h3>
-                    <p><a href="https://t.me/kenobingo" target="_blank">Canal Kenobingo</a></p>
+                    <i class="fas fa-phone-alt icon-small"></i>
+                    <h3>Telefone</h3>
+                    <p><a href="tel:+5599999999999">+55 (99) 99999-9999</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope icon-small"></i>
