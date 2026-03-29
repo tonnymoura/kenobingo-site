@@ -1,69 +1,81 @@
+// Funcionalidade do Menu Hambúrguer
+const hamburger = document.querySelector(".hamburger-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll(".nav-list a").forEach(n => n.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+}));
+
+// Animação de Fade-in on Scroll (Simples)
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+// Detectar dispositivo e mostrar Pop-up PWA
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu Hambúrguer
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-list a');
+    // Pequeno delay para não atrapalhar o carregamento inicial
+    setTimeout(() => {
+        const isIos = () => {
+            const userAgent = window.navigator.userAgent.toLowerCase();
+            return /iphone|ipad|ipod/.test(userAgent);
+        };
+        const isAndroid = () => {
+            const userAgent = window.navigator.userAgent.toLowerCase();
+            return /android/.test(userAgent);
+        };
+        
+        // Verifica se já está instalado (rodando como standalone)
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
-    hamburgerMenu.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        // Altera o ícone do hambúrguer para 'x' e vice-versa
-        hamburgerMenu.querySelector('i').classList.toggle('fa-bars');
-        hamburgerMenu.querySelector('i').classList.toggle('fa-times');
-    });
+        // Verifica se o usuário já fechou o aviso nesta sessão
+        const promptClosed = localStorage.getItem('pwaPromptClosed');
 
-    // Fechar menu ao clicar em um link (apenas para mobile)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburgerMenu.querySelector('i').classList.remove('fa-times');
-                hamburgerMenu.querySelector('i').classList.add('fa-bars');
+        // Só mostra se for mobile (iOS ou Android) e se não estiver instalado e não tiver fechado o aviso
+        if (!isInStandaloneMode() && !promptClosed) {
+            const pwaPrompt = document.getElementById('pwa-prompt');
+            const iosInstructions = document.getElementById('pwa-ios-instructions');
+            const androidInstructions = document.getElementById('pwa-android-instructions');
+            const closeBtn = document.getElementById('pwa-close-btn');
+
+            if (pwaPrompt && iosInstructions && androidInstructions && closeBtn) {
+                if (isIos()) {
+                    pwaPrompt.style.display = 'flex';
+                    iosInstructions.style.display = 'block';
+                } else if (isAndroid()) {
+                    pwaPrompt.style.display = 'flex';
+                    androidInstructions.style.display = 'block';
+                }
+
+                // Lógica para fechar o pop-up
+                closeBtn.addEventListener('click', () => {
+                    pwaPrompt.style.display = 'none';
+                    // Salva a preferência do usuário para não mostrar de novo tão cedo
+                    localStorage.setItem('pwaPromptClosed', 'true');
+                });
             }
-        });
-    });
-
-    // Scroll suave para links de navegação
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            const headerOffset = document.querySelector('header').offsetHeight; // Altura do header fixo
-            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset - 20; // 20px de padding extra
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Animação de scroll (opcional, para elementos aparecerem ao rolar)
-    // Exemplo simples: elementos com a classe 'fade-in'
-    const fadeInElements = document.querySelectorAll('.step-card, .game-card, .testimonial-card, .contact-item');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1 // Elemento visível em 10% para acionar
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target); // Para animar apenas uma vez
-            }
-        });
-    }, observerOptions);
-
-    fadeInElements.forEach(el => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-    });
+        }
+    }, 3000); // Aparece 3 segundos após o carregamento
 });
