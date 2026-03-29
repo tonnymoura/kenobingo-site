@@ -1,81 +1,63 @@
-// Funcionalidade do Menu Hambúrguer
-const hamburger = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
-// Fechar menu ao clicar em um link
-document.querySelectorAll(".nav-list a").forEach(n => n.addEventListener("click", () => {
-    navMenu.classList.remove("active");
-}));
-
-// Animação de Fade-in on Scroll (Simples)
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
-        }
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
-
-// Detectar dispositivo e mostrar Pop-up PWA
 document.addEventListener('DOMContentLoaded', () => {
-    // Pequeno delay para não atrapalhar o carregamento inicial
-    setTimeout(() => {
-        const isIos = () => {
-            const userAgent = window.navigator.userAgent.toLowerCase();
-            return /iphone|ipad|ipod/.test(userAgent);
-        };
-        const isAndroid = () => {
-            const userAgent = window.navigator.userAgent.toLowerCase();
-            return /android/.test(userAgent);
-        };
-        
-        // Verifica se já está instalado (rodando como standalone)
-        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+    
+    // ==========================================
+    // 1. LÓGICA DO EFEITO SANFONA (PONTOS ONLINE)
+    // ==========================================
+    const btnTogglePontos = document.getElementById('btn-toggle-pontos');
+    const listaPontos = document.getElementById('lista-pontos');
 
-        // Verifica se o usuário já fechou o aviso nesta sessão
+    if (btnTogglePontos && listaPontos) {
+        btnTogglePontos.addEventListener('click', () => {
+            // Liga/Desliga a classe 'open' que mostra a grade no CSS
+            listaPontos.classList.toggle('open');
+            
+            // Troca o visual do botão dependendo do estado
+            if (listaPontos.classList.contains('open')) {
+                btnTogglePontos.innerHTML = '<i class="fas fa-times"></i> Ocultar Pontos';
+                btnTogglePontos.style.backgroundColor = 'transparent';
+                btnTogglePontos.style.color = '#FF007F';
+            } else {
+                btnTogglePontos.innerHTML = '<i class="fas fa-map-marker-alt"></i> Mostrar Todos os Pontos';
+                btnTogglePontos.style.backgroundColor = '#FF007F';
+                btnTogglePontos.style.color = '#FFFFFF';
+                
+                // Sobe a tela de volta pro topo da seção caso a pessoa tenha rolado muito
+                document.getElementById('accordion-container').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    // ==========================================
+    // 2. LÓGICA DO POP-UP DE INSTALAÇÃO (PWA)
+    // ==========================================
+    setTimeout(() => {
+        const isIos = () => /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+        const isAndroid = () => /android/.test(window.navigator.userAgent.toLowerCase());
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
         const promptClosed = localStorage.getItem('pwaPromptClosed');
 
-        // Só mostra se for mobile (iOS ou Android) e se não estiver instalado e não tiver fechado o aviso
+        // Só exibe o popup se for celular, se NÃO estiver instalado e NÃO tiver fechado o aviso antes
         if (!isInStandaloneMode() && !promptClosed) {
             const pwaPrompt = document.getElementById('pwa-prompt');
-            const iosInstructions = document.getElementById('pwa-ios-instructions');
-            const androidInstructions = document.getElementById('pwa-android-instructions');
+            const iosInst = document.getElementById('pwa-ios-instructions');
+            const andInst = document.getElementById('pwa-android-instructions');
             const closeBtn = document.getElementById('pwa-close-btn');
 
-            if (pwaPrompt && iosInstructions && androidInstructions && closeBtn) {
+            if (pwaPrompt && iosInst && andInst && closeBtn) {
                 if (isIos()) {
                     pwaPrompt.style.display = 'flex';
-                    iosInstructions.style.display = 'block';
+                    iosInst.style.display = 'block';
                 } else if (isAndroid()) {
                     pwaPrompt.style.display = 'flex';
-                    androidInstructions.style.display = 'block';
+                    andInst.style.display = 'block';
                 }
 
-                // Lógica para fechar o pop-up
                 closeBtn.addEventListener('click', () => {
                     pwaPrompt.style.display = 'none';
-                    // Salva a preferência do usuário para não mostrar de novo tão cedo
+                    // Salva a decisão para não incomodar o usuário na próxima visita
                     localStorage.setItem('pwaPromptClosed', 'true');
                 });
             }
         }
-    }, 3000); // Aparece 3 segundos após o carregamento
+    }, 2500); // Exibe 2.5 segundos após abrir o site
 });
