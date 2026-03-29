@@ -1,4 +1,4 @@
-/* Variáveis CSS para cores e fontes */
+/* Variáveis CSS */
 :root {
     --primary-color: #8e44ad; /* Roxo principal */
     --secondary-color: #3498db; /* Azul secundário */
@@ -15,18 +15,22 @@
     --font-body: 'Open Sans', sans-serif;
 }
 
-/* Reset básico e estilos globais */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-light);
+    background-color: var(--white);
 }
 
 .container {
@@ -35,32 +39,29 @@ body {
     padding: 0 20px;
 }
 
-section {
-    padding: 80px 0;
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    color: var(--text-color);
+    line-height: 1.2;
 }
 
 h1 {
     font-size: 3.5em;
-    line-height: 1.2;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 2.5em;
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 20px;
 }
 
-p.section-description {
+.section-description {
     text-align: center;
     font-size: 1.1em;
     color: var(--light-text-color);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -68,21 +69,23 @@ p.section-description {
 
 a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-ul {
-    list-style: none;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Botões */
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn-game {
     display: inline-block;
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: 600;
-    transition: all 0.3s ease;
     text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha em botões */
 }
 
 .btn-primary {
@@ -92,8 +95,8 @@ ul {
 }
 
 .btn-primary:hover {
-    background-color: #7a3899; /* Tom mais escuro do roxo */
-    border-color: #7a3899;
+    background-color: #7a3a99; /* Tom mais escuro do roxo */
+    border-color: #7a3a99;
     transform: translateY(-2px);
 }
 
@@ -110,25 +113,24 @@ ul {
     transform: translateY(-2px);
 }
 
-.btn-large {
-    padding: 15px 35px;
-    font-size: 1.1em;
-}
-
 .btn-game {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
     background-color: var(--secondary-color);
     color: var(--white);
+    border: 2px solid var(--secondary-color);
     padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    margin-top: 15px;
 }
 
 .btn-game:hover {
-    background-color: #2980b9; /* Tom mais escuro do azul */
+    background-color: #2a81bb;
+    border-color: #2a81bb;
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1em;
 }
 
 /* Header */
@@ -138,6 +140,8 @@ ul {
     padding: 15px 0;
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-medium);
 }
@@ -157,18 +161,18 @@ ul {
 }
 
 .logo img {
-    height: 40px; /* Ajuste conforme necessário */
-    margin-right: 10px;
-    border-radius: 5px; /* Suaviza as bordas do logo */
+    height: 40px; /* Altura padrão para o logo */
+    margin-right: 10px; /* Espaço entre a imagem e o texto (se houver) */
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-list {
+    list-style: none;
     display: flex;
     gap: 25px;
 }
@@ -176,23 +180,12 @@ ul {
 .nav-list a {
     color: var(--white);
     font-weight: 600;
+    transition: color 0.3s ease;
     padding: 5px 0;
-    position: relative;
 }
 
-.nav-list a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width 0.3s ease;
-}
-
-.nav-list a:hover::after {
-    width: 100%;
+.nav-list a:hover {
+    color: var(--accent-color);
 }
 
 .header-btn {
@@ -233,7 +226,6 @@ ul {
     color: #0088CC; /* Cor do Telegram */
 }
 
-
 .hamburger-menu {
     display: none; /* Escondido por padrão em desktop */
     background: none;
@@ -245,7 +237,7 @@ ul {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, var(--primary-color), #a262c2);
+    background: linear-gradient(to right, #a262c2, var(--primary-color));
     color: var(--white);
     padding: 100px 0;
 }
@@ -262,13 +254,14 @@ ul {
 }
 
 .hero-content h1 {
-    color: var(--white);
+    font-size: 4em;
     margin-bottom: 20px;
+    color: var(--white);
 }
 
 .hero-content .subtitle {
     font-size: 1.3em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -279,7 +272,7 @@ ul {
 
 .hero-image {
     flex: 1;
-    text-align: center;
+    text-align: right;
 }
 
 .hero-image img {
@@ -389,57 +382,6 @@ ul {
 
 .game-card .btn-game {
     margin-bottom: 20px;
-}
-
-/* Seção de Resultados */
-.results-section {
-    background-color: var(--white);
-    padding: 80px 0;
-}
-
-.results-table-container {
-    overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
-    margin-top: 50px;
-    box-shadow: 0 5px 20px var(--shadow-light);
-    border-radius: 10px;
-}
-
-.results-section table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
-}
-
-.results-section th, .results-section td {
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.results-section th {
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-.results-section tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.results-section tbody tr:hover {
-    background-color: #f0f0f0;
-}
-
-.view-all-results {
-    margin-top: 40px;
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Seção de Depoimentos */
@@ -767,9 +709,5 @@ ul {
 
     .btn-secondary {
         margin-left: 0;
-    }
-
-    .results-section table {
-        font-size: 0.9em;
     }
 }
