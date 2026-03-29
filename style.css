@@ -1,15 +1,16 @@
 /* Variáveis CSS para cores e fontes */
 :root {
-    --primary-color: #8e44ad; /* Roxo principal */
-    --secondary-color: #9b59b6; /* Roxo secundário */
-    --accent-color: #f39c12; /* Laranja para destaque */
-    --text-color: #333;
-    --light-text-color: #555;
+    --primary-color: #8A2BE2; /* Azul Violeta - Cor principal */
+    --secondary-color: #FFD700; /* Ouro - Cor de destaque */
+    --accent-color: #FF6347; /* Vermelho Tomate - Para botões e interatividade */
+    --background-dark: #1a1a2e; /* Fundo escuro */
+    --background-light: #f4f4f9; /* Fundo claro */
     --white: #ffffff;
-    --background-light: #f8f9fa;
-    --background-dark: #2c3e50; /* Azul escuro para footer */
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --black: #000000;
+    --text-color: #333333;
+    --light-text-color: #555555;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
 
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Open Sans', sans-serif;
@@ -33,44 +34,42 @@ body {
     background-color: var(--white);
 }
 
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Container Global */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Títulos de Seção */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--primary-color);
-    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
 h1 {
     font-size: 3.5em;
-    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 h2 {
     font-size: 2.5em;
-    margin-bottom: 15px;
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
 }
 
 .section-description {
@@ -78,38 +77,40 @@ h2 {
     font-size: 1.1em;
     color: var(--light-text-color);
     margin-bottom: 60px;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Botões */
-.btn-primary, .btn-secondary {
+.btn-primary {
     display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 2px solid var(--primary-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background-color: darken(var(--primary-color), 10%);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
+    display: inline-block;
     background-color: transparent;
     color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
     border: 2px solid var(--primary-color);
-    margin-left: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -128,10 +129,10 @@ h2 {
     background-color: var(--background-dark);
     color: var(--white);
     padding: 15px 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-medium);
 }
@@ -142,47 +143,39 @@ h2 {
     align-items: center;
 }
 
-.header .logo {
-    font-family: var(--font-heading);
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--white);
-    text-decoration: none;
-    display: flex; /* Para alinhar a imagem do logo */
-    align-items: center;
-}
-
-.header .logo img {
-    height: 40px; /* Altura padrão para o logo */
-    margin-right: 10px; /* Espaço entre a imagem e o texto, se houver */
+.logo img {
+    height: 40px; /* Ajuste conforme o tamanho da sua logo */
+    vertical-align: middle;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 .nav-list {
+    list-style: none;
     display: flex;
-    gap: 30px;
-    margin-right: 30px;
+    gap: 25px;
 }
 
 .nav-list a {
     color: var(--white);
     font-weight: 600;
     transition: color 0.3s ease;
+    padding: 5px 0;
     position: relative;
 }
 
 .nav-list a::after {
     content: '';
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 0;
     height: 2px;
     background-color: var(--accent-color);
-    left: 0;
-    bottom: -5px;
     transition: width 0.3s ease;
 }
 
@@ -190,42 +183,20 @@ h2 {
     width: 100%;
 }
 
-.header-btn {
-    margin-left: 20px;
-}
-
-/* Estilo para os ícones de mídias sociais no header */
 .header-social-icons {
     display: flex;
     gap: 15px;
-    margin-left: 20px; /* Espaço entre o menu e os ícones */
+    margin-left: 20px;
 }
 
 .header-social-icons a {
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
 .header-social-icons a:hover {
-    color: var(--accent-color); /* Cor de destaque no hover */
-}
-
-/* Cores de hover específicas para ícones */
-.header-social-icons a.fa-twitch:hover, .social-icons a.fa-twitch:hover {
-    color: #9146FF; /* Cor da Twitch */
-}
-.header-social-icons a.fa-youtube:hover, .social-icons a.fa-youtube:hover {
-    color: #FF0000; /* Cor do YouTube */
-}
-.header-social-icons a.fa-instagram:hover, .social-icons a.fa-instagram:hover {
-    color: #C13584; /* Cor do Instagram */
-}
-.social-icons a.fa-whatsapp:hover {
-    color: #25D366; /* Cor do WhatsApp */
-}
-.social-icons a.fa-telegram-plane:hover {
-    color: #0088CC; /* Cor do Telegram */
+    color: var(--accent-color);
 }
 
 .hamburger-menu {
@@ -239,18 +210,16 @@ h2 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to right, var(--background-dark), #3a3a5e);
     color: var(--white);
-    padding: 100px 0;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+    padding: 150px 0 100px 0; /* Ajustado para compensar o header fixo */
+    text-align: left;
 }
 
 .hero-section .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 40px;
 }
 
@@ -260,19 +229,18 @@ h2 {
 
 .hero-content h1 {
     color: var(--white);
-    font-size: 4em;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero-content .subtitle {
     font-size: 1.3em;
-    margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .hero-image {
@@ -284,19 +252,20 @@ h2 {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 15px 40px var(--shadow-medium);
+    box-shadow: 0 10px 30px var(--shadow-medium);
 }
 
 /* Seção "Como Funciona" */
 .how-it-works-section {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--background-light);
+    text-align: center;
 }
 
 /* Estilo para o container do vídeo */
 .video-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 50px auto 20px auto; /* Ajustado para dar espaço ao caption */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px var(--shadow-medium);
@@ -305,28 +274,52 @@ h2 {
 
 .video-link-wrapper {
     display: block; /* Faz o link cobrir todo o vídeo */
+    position: relative;
     line-height: 0; /* Remove espaço extra abaixo do vídeo */
 }
 
-.video-container video {
+.video-link-wrapper video {
     width: 100%;
     height: auto;
     display: block;
 }
 
+.video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.youtube-link {
+    color: var(--accent-color); /* Cor de destaque para o link */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.youtube-link i {
+    margin-right: 5px;
+}
+
+.youtube-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .step-card {
-    background-color: var(--background-light);
+    background-color: var(--white);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px var(--shadow-light);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -337,7 +330,7 @@ h2 {
 
 .step-card .icon-large {
     font-size: 3.5em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -352,8 +345,8 @@ h2 {
 
 /* Seção de Jogos */
 .games-section {
-    background-color: var(--background-light);
     padding: 80px 0;
+    background-color: var(--white);
     text-align: center;
 }
 
@@ -361,26 +354,28 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .game-card {
-    background-color: var(--white);
-    padding: 30px;
+    background-color: var(--background-light);
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 20px var(--shadow-light);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Para organizar o conteúdo */
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-    color: inherit; /* Mantém a cor do texto padrão */
+    display: flex; /* Para alinhar conteúdo */
+    flex-direction: column; /* Conteúdo em coluna */
+    justify-content: space-between; /* Espaço entre título/descrição e botão */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    color: var(--text-color); /* Cor do texto padrão */
 }
 
 .game-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px var(--shadow-medium);
     text-decoration: none; /* Remove sublinhado do link no hover */
+    color: var(--text-color); /* Mantém a cor do texto */
 }
 
 .game-card h3 {
@@ -392,7 +387,7 @@ h2 {
 .game-card p {
     color: var(--light-text-color);
     margin-bottom: 20px;
-    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
 }
 
 .btn-game {
