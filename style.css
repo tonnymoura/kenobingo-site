@@ -1,8 +1,8 @@
-/* Variáveis CSS */
+/* Variáveis CSS para cores e fontes */
 :root {
     --primary-color: #8e44ad; /* Roxo principal */
-    --secondary-color: #3498db; /* Azul secundário */
-    --accent-color: #e74c3c; /* Vermelho/Laranja para destaque */
+    --secondary-color: #9b59b6; /* Roxo secundário */
+    --accent-color: #f39c12; /* Laranja para destaque */
     --text-color: #333;
     --light-text-color: #555;
     --white: #ffffff;
@@ -22,28 +22,56 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-light);
+    background-color: var(--white);
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container Global */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Títulos de Seção */
+h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--primary-color);
     line-height: 1.2;
 }
 
-h1 { font-size: 3.5em; }
-h2 { font-size: 2.5em; text-align: center; margin-bottom: 20px; }
-h3 { font-size: 1.5em; }
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
 .section-description {
     text-align: center;
@@ -56,15 +84,13 @@ h3 { font-size: 1.5em; }
 }
 
 /* Botões */
-.btn-primary, .btn-secondary, .btn-game {
+.btn-primary, .btn-secondary {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 5px;
-    text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     text-align: center;
-    cursor: pointer;
 }
 
 .btn-primary {
@@ -74,8 +100,8 @@ h3 { font-size: 1.5em; }
 }
 
 .btn-primary:hover {
-    background-color: #7b3799; /* Um roxo um pouco mais escuro */
-    border-color: #7b3799;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -97,20 +123,6 @@ h3 { font-size: 1.5em; }
     font-size: 1.1em;
 }
 
-.btn-game {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border: 2px solid var(--secondary-color);
-    font-size: 0.9em;
-    padding: 8px 18px;
-}
-
-.btn-game:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-    transform: translateY(-2px);
-}
-
 /* Header */
 .header {
     background-color: var(--background-dark);
@@ -118,6 +130,8 @@ h3 { font-size: 1.5em; }
     padding: 15px 0;
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-medium);
 }
@@ -128,7 +142,7 @@ h3 { font-size: 1.5em; }
     align-items: center;
 }
 
-.logo {
+.header .logo {
     font-family: var(--font-heading);
     font-size: 1.8em;
     font-weight: 700;
@@ -138,9 +152,9 @@ h3 { font-size: 1.5em; }
     align-items: center;
 }
 
-.logo img {
-    height: 40px; /* Ajuste conforme necessário */
-    margin-right: 10px;
+.header .logo img {
+    height: 40px; /* Altura padrão para o logo */
+    margin-right: 10px; /* Espaço entre a imagem e o texto, se houver */
 }
 
 .nav-menu {
@@ -149,21 +163,31 @@ h3 { font-size: 1.5em; }
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
     gap: 30px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .nav-list a {
     color: var(--white);
-    text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    position: relative;
 }
 
-.nav-list a:hover {
-    color: var(--accent-color);
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
 }
 
 .header-btn {
@@ -191,7 +215,7 @@ h3 { font-size: 1.5em; }
 .header-social-icons a.fa-twitch:hover, .social-icons a.fa-twitch:hover {
     color: #9146FF; /* Cor da Twitch */
 }
-.header-social-icons a.fa-youtube:hover, .social-icons a.fa-youtube:hover, .youtube-link:hover {
+.header-social-icons a.fa-youtube:hover, .social-icons a.fa-youtube:hover {
     color: #FF0000; /* Cor do YouTube */
 }
 .header-social-icons a.fa-instagram:hover, .social-icons a.fa-instagram:hover {
@@ -215,15 +239,18 @@ h3 { font-size: 1.5em; }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, var(--primary-color), #a262c2);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: var(--white);
     padding: 100px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-section .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 40px;
 }
 
@@ -233,7 +260,8 @@ h3 { font-size: 1.5em; }
 
 .hero-content h1 {
     color: var(--white);
-    margin-bottom: 20px;
+    font-size: 4em;
+    margin-bottom: 25px;
 }
 
 .hero-content .subtitle {
@@ -249,35 +277,34 @@ h3 { font-size: 1.5em; }
 
 .hero-image {
     flex: 1;
-    text-align: center;
+    text-align: right;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 10px 30px var(--shadow-medium);
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
 /* Seção "Como Funciona" */
 .how-it-works-section {
     padding: 80px 0;
     background-color: var(--white);
-    text-align: center;
 }
 
 /* Estilo para o container do vídeo */
 .video-container {
     max-width: 800px;
-    margin: 50px auto 20px auto; /* Ajustado para dar espaço ao caption */
+    margin: 50px auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px var(--shadow-medium);
     position: relative;
 }
 
-.video-container .video-link-wrapper {
-    display: block; /* Faz o link envolver todo o vídeo */
+.video-link-wrapper {
+    display: block; /* Faz o link cobrir todo o vídeo */
     line-height: 0; /* Remove espaço extra abaixo do vídeo */
 }
 
@@ -285,24 +312,6 @@ h3 { font-size: 1.5em; }
     width: 100%;
     height: auto;
     display: block;
-}
-
-.video-caption {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: var(--text-color);
-}
-
-.video-caption .youtube-link {
-    color: var(--accent-color); /* Cor de destaque para o link */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.video-caption .youtube-link i {
-    margin-right: 5px;
 }
 
 .steps-grid {
@@ -328,7 +337,7 @@ h3 { font-size: 1.5em; }
 
 .step-card .icon-large {
     font-size: 3.5em;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -355,87 +364,79 @@ h3 { font-size: 1.5em; }
     margin-top: 50px;
 }
 
-.game-card-link {
-    text-decoration: none; /* Remove sublinhado do link */
-    color: inherit; /* Herda a cor do texto */
-}
-
 .game-card {
     background-color: var(--white);
-    padding: 30px 0; /* Ajustado para remover padding lateral da imagem */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px var(--shadow-light);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Garante que todos os cards tenham a mesma altura */
-    display: flex;
+    display: flex; /* Para organizar o conteúdo */
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    color: inherit; /* Mantém a cor do texto padrão */
 }
 
 .game-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px var(--shadow-medium);
+    text-decoration: none; /* Remove sublinhado do link no hover */
 }
-
-/* Removido o estilo para a imagem do jogo */
-/*
-.game-card img {
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 20px;
-}
-*/
 
 .game-card h3 {
-    margin-top: 20px;
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.4em;
 }
 
 .game-card p {
-    padding: 0 20px;
-    margin-bottom: 20px;
     color: var(--light-text-color);
-    flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
 }
 
-.game-card .btn-game {
-    margin-bottom: 20px;
-    align-self: center; /* Centraliza o botão */
+.btn-game {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Garante que o botão fique na parte inferior */
+}
+
+.btn-game:hover {
+    background-color: darken(var(--accent-color), 10%); /* Escurece no hover */
+}
+
+.btn-game i {
+    margin-left: 8px;
 }
 
 /* Seção de Resultados */
 .results-section {
-    background-color: var(--white);
     padding: 80px 0;
+    background-color: var(--white);
 }
 
 .results-table-container {
-    overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
+    overflow-x: auto; /* Para tabelas responsivas em telas pequenas */
     margin-top: 50px;
-    box-shadow: 0 5px 20px var(--shadow-light);
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px; /* Limita a largura da tabela */
+    box-shadow: 0 5px 20px var(--shadow-light);
 }
 
 .results-section table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    min-width: 600px; /* Garante que a tabela não fique muito pequena */
 }
 
 .results-section th, .results-section td {
     padding: 15px 20px;
     border-bottom: 1px solid #eee;
+    text-align: left;
 }
 
 .results-section th {
