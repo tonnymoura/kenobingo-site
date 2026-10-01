@@ -165,7 +165,7 @@ h2 { font-size: 2.5em; margin-bottom: 0.8em; text-align: center; }
     
     /* Pontos Online (Força 3 Coluninhas) */
     .pontos-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .ponto-link { padding: 10px 5px; font-size: 0.75em; white-space: normal; line-height: 1.2; }
+    .ponto-link { padding: 10px 5px; font-size: 0.75em; white-space: normal; line-height: 1.2; height: 54px; overflow: hidden; }
 
     /* Footer Mobile Alinhado à Esquerda */
     .footer { padding-top: 40px; padding-bottom: 100px; } 
