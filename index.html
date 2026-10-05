@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenobingo - Sua Plataforma de Jogos Online</title>
     <meta name="description" content="Kenobingo: A melhor plataforma de jogos online. Divirta-se com nossos jogos, veja resultados e aproveite promoções exclusivas. Jogue agora!">
     <link rel="canonical" href="https://kenobingo.jmdiversoes.com/">
@@ -11,9 +11,14 @@
     <meta property="og:title" content="Kenobingo - Sua Plataforma de Jogos Online">
     <meta property="og:description" content="Kenobingo: A melhor plataforma de jogos online. Divirta-se com nossos jogos, veja resultados e aproveite promoções exclusivas. Jogue agora!">
     <meta property="og:url" content="https://kenobingo.jmdiversoes.com/">
-    <meta property="og:image" content="https://kenobingo.jmdiversoes.com/LOGOMARCA.jpg">
+    <meta property="og:image" content="https://kenobingo.jmdiversoes.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kenobingo - Hoje pode ser seu dia de sorte!">
+    <meta property="og:site_name" content="Kenobingo">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://kenobingo.jmdiversoes.com/og-image.jpg">
 
     <script type="application/ld+json">
     {
@@ -22,7 +27,16 @@
       "name": "Kenobingo",
       "url": "https://kenobingo.jmdiversoes.com/",
       "logo": "https://kenobingo.jmdiversoes.com/LOGOMARCA.jpg",
+      "email": "livekenobingo@gmail.com",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+55-86-99990-0396",
+        "email": "livekenobingo@gmail.com",
+        "availableLanguage": "Portuguese"
+      }],
       "sameAs": [
+        "https://kick.com/livekenobingo",
         "https://www.youtube.com/@livekenobingo",
         "https://www.twitch.tv/livekenobingo",
         "https://www.instagram.com/livekenobingo/"
@@ -30,8 +44,8 @@
     }
     </script>
 
-    <link rel="icon" type="image/jpeg" href="icone-app.jpg">
-    <link rel="apple-touch-icon" href="icone-app.jpg">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,15 +55,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=2">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
     <header class="header">
         <div class="container header-container">
             <a href="#home" class="logo">
-                <img src="LOGOMARCA.jpg" alt="Logo Kenobingo" style="height: 40px; width: auto;">
+                <img src="logo-header.jpg" alt="Logo Kenobingo" width="143" height="120" style="height: 40px; width: auto;">
             </a>
 
             <nav class="nav-menu desktop-only">
@@ -60,14 +74,15 @@
                     <li><a href="#contact">Contato</a></li>
                 </ul>
                 <div class="header-social-icons">
-                    <a href="https://www.twitch.tv/livekenobingo" target="_blank"><i class="fab fa-twitch"></i></a>
-                    <a href="https://www.youtube.com/@livekenobingo" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/livekenobingo/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" aria-label="Kick"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></a>
+                    <a href="https://www.twitch.tv/livekenobingo" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@livekenobingo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/livekenobingo/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </div>
-                <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary header-btn pulse-animation">Jogar Agora</a>
+                <a href="https://kenobingo.123client.net" target="_blank" rel="noopener" class="btn-primary header-btn pulse-animation">Jogar Agora</a>
             </nav>
 
-            <a href="https://www.twitch.tv/livekenobingo" target="_blank" class="live-btn-header">
+            <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" class="live-btn-header" aria-label="LIVE - assistir ao vivo" data-live-choice aria-haspopup="true" aria-expanded="false">
                 <div class="live-icon-wrapper">
                     <div class="pulse-ring"></div>
                     <i class="fas fa-play"></i>
@@ -83,13 +98,14 @@
                 <h1>Sua Emoção Começa Aqui: Kenobingo Online!</h1>
                 <p class="subtitle">Descubra a adrenalina dos jogos de bingo online. Diversão garantida, prêmios incríveis e uma comunidade vibrante esperam por você.</p>
                 <div class="hero-buttons">
-                    <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary btn-large pulse-animation">Jogar Agora</a>
-                    <a href="https://www.twitch.tv/livekenobingo" target="_blank" class="btn-secondary btn-large">Assista ao Vivo</a>
+                    <a href="https://kenobingo.123client.net" target="_blank" rel="noopener" class="btn-primary btn-large pulse-animation">Jogar Agora</a>
+                    <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" class="btn-kick btn-large"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg> Assista na Kick</a>
+                    <a href="https://www.twitch.tv/livekenobingo" target="_blank" rel="noopener" class="btn-secondary btn-large btn-twitch"><i class="fab fa-twitch"></i> Assista na Twitch</a>
                 </div>
             </div>
             <div class="hero-image">
-                <a href="https://kenobingo.123client.net" target="_blank">
-                    <video controls autoplay muted loop playsinline>
+                <a href="https://kenobingo.123client.net" target="_blank" rel="noopener">
+                    <video controls autoplay muted loop playsinline preload="metadata" poster="TV-poster.jpg">
                         <source src="TV.mp4" type="video/mp4">
                     </video>
                 </a>
@@ -108,10 +124,10 @@
                     <p>Vá até um de nossos pontos de venda ou clique em um dos links parceiros.</p>
                 </div>
                 
-                <a href="https://www.twitch.tv/livekenobingo" target="_blank" class="step-card fade-in active-effect custom-link-card">
-                    <i class="fab fa-twitch" style="color: #9146FF;"></i>
+                <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" class="step-card fade-in active-effect custom-link-card" data-live-choice aria-haspopup="true" aria-expanded="false">
+                    <div class="step-icons"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true" fill="#53FC18"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg><i class="fab fa-twitch" style="color: #9146FF;"></i></div>
                     <h3>Acompanhe ao Vivo</h3>
-                    <p>Sorteios diários das 08:00h às 23:45h, com novas rodadas a cada 15 minutos.</p>
+                    <p>Sorteios diários das 08:00h às 23:45h, com novas rodadas a cada 15 minutos. Ao vivo na Kick e na Twitch.</p>
                 </a>
 
                 <div class="step-card fade-in active-effect">
@@ -135,312 +151,312 @@
             </div>
 
             <div class="pontos-grid open" id="lista-pontos">
-                <a href="https://trescoracoes.123client.net" target="_blank" class="ponto-link active-effect">3 Corações</a>
-                <a href="https://adamadevermelho.123client.net" target="_blank" class="ponto-link active-effect">A Dama De Vermelho</a>
-                <a href="https://asorteesua.123client.net" target="_blank" class="ponto-link active-effect">A Sorte É Sua</a>
-                <a href="https://adegadalu.123client.net" target="_blank" class="ponto-link active-effect">Adega Da Lu</a>
-                <a href="https://agoravai.123client.net" target="_blank" class="ponto-link active-effect">Agora Vai</a>
-                <a href="https://aguiadeourojogos.123client.net" target="_blank" class="ponto-link active-effect">Aguia De Ouro Jogos</a>
-                <a href="https://albuquerquesbar.123client.net" target="_blank" class="ponto-link active-effect">Albuquerques Bar</a>
-                <a href="https://aldeiasbar.123client.net" target="_blank" class="ponto-link active-effect">Aldeias Bar</a>
-                <a href="https://anadomilim.123client.net" target="_blank" class="ponto-link active-effect">Ana Do Milim</a>
-                <a href="https://agelimbar.123client.net" target="_blank" class="ponto-link active-effect">Angelim Bar</a>
-                <a href="https://arenaalfredo.123client.net" target="_blank" class="ponto-link active-effect">Arena Alfredo</a>
-                <a href="https://arenashow.123client.net" target="_blank" class="ponto-link active-effect">Arena Show</a>
-                <a href="https://aruerabar.123client.net" target="_blank" class="ponto-link active-effect">Aruera Bar</a>
-                <a href="https://balaodaveneza.123client.net" target="_blank" class="ponto-link active-effect">Balão Da Veneza</a>
-                <a href="https://bancadajessi.123client.net" target="_blank" class="ponto-link active-effect">Banca Da Jessi</a>
-                <a href="https://bancadalayana.123client.net" target="_blank" class="ponto-link active-effect">Banca Da Layana</a>
-                <a href="https://baraltashoraspedreiras.123client.net" target="_blank" class="ponto-link active-effect">Bar Altas Horas 02</a>
-                <a href="https://barbomclima.123client.net" target="_blank" class="ponto-link active-effect">Bar Bom Clima</a>
-                <a href="https://barborabeber.123client.net" target="_blank" class="ponto-link active-effect">Bar Bora Beber</a>
-                <a href="https://bardaarlene.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Arlene</a>
-                <a href="https://bardaedna.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Edna</a>
-                <a href="https://bardaester.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Ester</a>
-                <a href="https://bardafabiana.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Fabiana</a>
-                <a href="https://bardafranca.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Franca</a>
-                <a href="https://bardahelp.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Help</a>
-                <a href="https://bardairene.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Irene</a>
-                <a href="https://bardakatia.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Katia</a>
-                <a href="https://bardalayss.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Lays</a>
-                <a href="https://bardaleda.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Leda</a>
-                <a href="https://bardaloirinha.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Loirinha</a>
-                <a href="https://bardamariia.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Maria</a>
-                <a href="https://barmariapovoado.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Maria Povoado Soturno</a>
-                <a href="https://bardamarines.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Marines</a>
-                <a href="https://bardamayara.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Mayara</a>
-                <a href="https://bardapatydois.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Paty</a>
-                <a href="https://bardapituiba.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Pituiba</a>
-                <a href="https://bardapituibavd.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Pituiba Vd</a>
-                <a href="https://bardapretinha.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Pretinha</a>
-                <a href="https://bardaquiteria.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Quiteria</a>
-                <a href="https://bardarisoleta.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Risoleta</a>
-                <a href="https://bardasocorro.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Socorro</a>
-                <a href="https://bardasocorroum.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Socorro 1</a>
-                <a href="https://bardatapa.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Tapa</a>
-                <a href="https://bardatati.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Tati</a>
-                <a href="https://bardaterezadois.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Tereza</a>
-                <a href="https://bardavitoria.123client.net" target="_blank" class="ponto-link active-effect">Bar Da Vitória</a>
-                <a href="https://bardascoleguinhass.123client.net" target="_blank" class="ponto-link active-effect">Bar Das Coleguinhas</a>
-                <a href="https://bardoarmando.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Armando</a>
-                <a href="https://bardobacabal.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Bacabal</a>
-                <a href="https://bardobine.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Bine</a>
-                <a href="https://bardobrendo.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Brendo</a>
-                <a href="https://barcareca.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Careca</a>
-                <a href="https://bardodalton.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Dalton</a>
-                <a href="https://bardodamiao.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Damião</a>
-                <a href="https://bardodoca.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Doca</a>
-                <a href="https://bardodude.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Dudé</a>
-                <a href="https://bardofabim.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Fabim</a>
-                <a href="https://bardofaixa.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Faixa</a>
-                <a href="https://bardogordo.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Gordo</a>
-                <a href="https://bardoguaiamu.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Guaiamu</a>
-                <a href="https://bardohilton.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Hilton</a>
-                <a href="https://bardoilario.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Ilario</a>
-                <a href="https://bardojabuti.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Jabuti</a>
-                <a href="https://bardojailsondois.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Jailson</a>
-                <a href="https://baardojoao.123client.net" target="_blank" class="ponto-link active-effect">Bar Do João</a>
-                <a href="https://barjurandirkenobets.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Jurandir Keno Bets</a>
-                <a href="https://bardokelson.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Kelson</a>
-                <a href="https://bardoleaokeno.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Leão</a>
-                <a href="https://barmarcao.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Marcao</a>
-                <a href="https://bardonenem.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Nenem*</a>
-                <a href="https://bardopatriota.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Patriota</a>
-                <a href="https://barpescador.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Pescador</a>
-                <a href="https://bardoreal.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Real</a>
-                <a href="https://bardoselmim.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Selmim</a>
-                <a href="https://bardoseubarriga.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Seu Barriga</a>
-                <a href="https://bardosolon.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Solon</a>
-                <a href="https://bardosono.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Sono</a>
-                <a href="https://bardotete.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Tete</a>
-                <a href="https://bardovaldir.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Valdir</a>
-                <a href="https://bardovalmiir.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Valmir</a>
-                <a href="https://bardovanja.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Vanja</a>
-                <a href="https://bardowemerson.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Wemerson</a>
-                <a href="https://bardozeluis.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Ze Luis</a>
-                <a href="https://bardozeluiz.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Ze Luiz</a>
-                <a href="https://bardozevinvin.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Ze Vin Vin</a>
-                <a href="https://bardozemarianovo.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Zé Maria Novo</a>
-                <a href="https://bardoindio.123client.net" target="_blank" class="ponto-link active-effect">Bar Do Índio</a>
-                <a href="https://bardonacruz.123client.net" target="_blank" class="ponto-link active-effect">Bar Dona Cruz</a>
-                <a href="https://bardosamigoos.123client.net" target="_blank" class="ponto-link active-effect">Bar Dos Amigos</a>
-                <a href="https://baredistra.123client.net" target="_blank" class="ponto-link active-effect">Bar E Dist R.a</a>
-                <a href="https://baremerceariadaana.123client.net" target="_blank" class="ponto-link active-effect">Bar E Mercearia Da Ana</a>
-                <a href="https://barmerceariage.123client.net" target="_blank" class="ponto-link active-effect">Bar E Mercearia Do Ge</a>
-                <a href="https://baracainordestino.123client.net" target="_blank" class="ponto-link active-effect">Bar Joao Do Laço</a>
-                <a href="https://barjoaoprego.123client.net" target="_blank" class="ponto-link active-effect">Bar João Prego</a>
-                <a href="https://bardocarlim.123client.net" target="_blank" class="ponto-link active-effect">Bar O Carlim</a>
-                <a href="https://baroromario.123client.net" target="_blank" class="ponto-link active-effect">Bar O Romario</a>
-                <a href="https://barpiripompom.123client.net" target="_blank" class="ponto-link active-effect">Bar Piripompom</a>
-                <a href="https://barpordosoldois.123client.net" target="_blank" class="ponto-link active-effect">Bar Por Do Sol</a>
-                <a href="https://barracadadoura.123client.net" target="_blank" class="ponto-link active-effect">Barracadadoura</a>
-                <a href="https://baxinhalanches.123client.net" target="_blank" class="ponto-link active-effect">Baxinha Lanches</a>
-                <a href="https://beiramar.123client.net" target="_blank" class="ponto-link active-effect">Beira Mar</a>
-                <a href="https://berinjelasbar.123client.net" target="_blank" class="ponto-link active-effect">Berinjelas Bar</a>
-                <a href="https://bernardo.123client.net" target="_blank" class="ponto-link active-effect">Bernardo</a>
-                <a href="https://betscastelobranco.123client.net" target="_blank" class="ponto-link active-effect">Bets Castelo Branco</a>
-                <a href="https://betslanche.123client.net" target="_blank" class="ponto-link active-effect">Bets Lanche</a>
-                <a href="https://bigodacigana.123client.net" target="_blank" class="ponto-link active-effect">Bingo Da Cigana</a>
-                <a href="https://bingodafeira.123client.net" target="_blank" class="ponto-link active-effect">Bingo Da Feira</a>
-                <a href="https://bingodoluck.123client.net" target="_blank" class="ponto-link active-effect">Bingo Do Luck</a>
-                <a href="https://birocasbar.123client.net" target="_blank" class="ponto-link active-effect">Biroscas Bar</a>
-                <a href="https://bismacbar.123client.net" target="_blank" class="ponto-link active-effect">Bismac Bar</a>
-                <a href="https://bmcoveniencia.123client.net" target="_blank" class="ponto-link active-effect">Bm Conveniencia</a>
-                <a href="https://boemiosbardasueli.123client.net" target="_blank" class="ponto-link active-effect">Boemios Bar Da Sueli</a>
-                <a href="https://bombacds.123client.net" target="_blank" class="ponto-link active-effect">Bomba Cds</a>
-                <a href="https://botecocasadamae.123client.net" target="_blank" class="ponto-link active-effect">Boteco Casa Da Mae</a>
-                <a href="https://botecodaheloisa.123client.net" target="_blank" class="ponto-link active-effect">Boteco Da Heloisa</a>
-                <a href="https://boteconenzinhadois.123client.net" target="_blank" class="ponto-link active-effect">Boteco Da Nenzinha 02</a>
-                <a href="https://botecodobracinho.123client.net" target="_blank" class="ponto-link active-effect">Boteco Do Bracinho</a>
-                <a href="https://botecodogordin.123client.net" target="_blank" class="ponto-link active-effect">Boteco Do Gordin</a>
-                <a href="https://botecodoreggae.123client.net" target="_blank" class="ponto-link active-effect">Boteco Do Reggae</a>
-                <a href="https://fuxiqueros.123client.net" target="_blank" class="ponto-link active-effect">Boteco Dos Fuxiqueros</a>
-                <a href="https://botecozite.123client.net" target="_blank" class="ponto-link active-effect">Boteco Zite</a>
-                <a href="https://botecodk.123client.net" target="_blank" class="ponto-link active-effect">Botecodk</a>
-                <a href="https://boxdafamilia.123client.net" target="_blank" class="ponto-link active-effect">Box Da Familia</a>
-                <a href="https://boxdosamigos.123client.net" target="_blank" class="ponto-link active-effect">Box Dos Amigos</a>
-                <a href="https://budegadoary.123client.net" target="_blank" class="ponto-link active-effect">Budega Do Ary</a>
-                <a href="https://burguerdez.123client.net" target="_blank" class="ponto-link active-effect">Burguer 10</a>
-                <a href="https://burropreto.123client.net" target="_blank" class="ponto-link active-effect">Burro Preto</a>
-                <a href="https://butecodomaruricio.123client.net" target="_blank" class="ponto-link active-effect">Buteco Do Maurício</a>
-                <a href="https://butecodoeldon.123client.net" target="_blank" class="ponto-link active-effect">Buteco Do Eldon</a>
-                <a href="https://bardamorena.123client.net" target="_blank" class="ponto-link active-effect">Cabana Das Bebidas</a>
-                <a href="https://calangosbar.123client.net" target="_blank" class="ponto-link active-effect">Calangos Bar</a>
-                <a href="https://cantinhodasol.123client.net" target="_blank" class="ponto-link active-effect">Cantinho Da Sol</a>
-                <a href="https://fortunekeno.123client.net" target="_blank" class="ponto-link active-effect">Cantinho Da Sorte</a>
-                <a href="https://cantogelado.123client.net" target="_blank" class="ponto-link active-effect">Cantogelado</a>
-                <a href="https://cededobotafogo.123client.net" target="_blank" class="ponto-link active-effect">Cede Do Botafogo</a>
-                <a href="https://cedrossorveteria.123client.net" target="_blank" class="ponto-link active-effect">Cedros Sorveteria</a>
-                <a href="https://centralbayeux.123client.net" target="_blank" class="ponto-link active-effect">Central Bayeux</a>
-                <a href="https://centralgcincopicos.123client.net" target="_blank" class="ponto-link active-effect">Central G5 Picos</a>
-                <a href="https://chopbar.123client.net" target="_blank" class="ponto-link active-effect">Chops Bar</a>
-                <a href="https://chryslay.123client.net" target="_blank" class="ponto-link active-effect">Chryslay</a>
-                <a href="https://chupechupe.123client.net" target="_blank" class="ponto-link active-effect">Chupe - Chupe</a>
-                <a href="https://churrasquinhodaelza.123client.net" target="_blank" class="ponto-link active-effect">Churrasquinho Da Elza</a>
-                <a href="https://churrasquinhodopaulinho.123client.net" target="_blank" class="ponto-link active-effect">Churrasquinho Do Paulinho</a>
-                <a href="https://clubedapaz.123client.net" target="_blank" class="ponto-link active-effect">Clube Da Paz</a>
-                <a href="https://comercialalves.123client.net" target="_blank" class="ponto-link active-effect">Comercial Alves</a>
-                <a href="https://comerialgeycy.123client.net" target="_blank" class="ponto-link active-effect">Comercial Geycy</a>
-                <a href="https://comercialmateus.123client.net" target="_blank" class="ponto-link active-effect">Comercial Mateus</a>
-                <a href="https://comercialnovopointer.123client.net" target="_blank" class="ponto-link active-effect">Comercial Novo Pointer</a>
-                <a href="https://comercialpoty.123client.net" target="_blank" class="ponto-link active-effect">Comercial Poty</a>
-                <a href="https://comercialriita.123client.net" target="_blank" class="ponto-link active-effect">Comercial Rita</a>
-                <a href="https://convenienciainovacao.123client.net" target="_blank" class="ponto-link active-effect">Conveniência Inovação</a>
-                <a href="https://corujadasorte.123client.net" target="_blank" class="ponto-link active-effect">Coruja Da Sorte</a>
-                <a href="https://cristinajogos.123client.net" target="_blank" class="ponto-link active-effect">Cristina Jogos</a>
-                <a href="https://bancadozezeca.123client.net" target="_blank" class="ponto-link active-effect">Cauany Keno</a>
-                <a href="https://degadamaria.123client.net" target="_blank" class="ponto-link active-effect">D&g</a>
-                <a href="https://danieldafarinha.123client.net" target="_blank" class="ponto-link active-effect">Daniel Da Farina</a>
-                <a href="https://deliciasdasi.123client.net" target="_blank" class="ponto-link active-effect">Delicias Da Si</a>
-                <a href="https://descubra.123client.net" target="_blank" class="ponto-link active-effect">Descubra</a>
-                <a href="https://dianalaches.123client.net" target="_blank" class="ponto-link active-effect">Diana Lanches</a>
-                <a href="https://dulcebar.123client.net" target="_blank" class="ponto-link active-effect">Dulce Bar</a>
-                <a href="https://edinholorranbebidas.123client.net" target="_blank" class="ponto-link active-effect">Edinho Lorran Bebidas</a>
-                <a href="https://eliasvip.123client.net" target="_blank" class="ponto-link active-effect">Elias Vip</a>
-                <a href="https://erlandiobets.123client.net" target="_blank" class="ponto-link active-effect">Erlandio Bets</a>
-                <a href="https://espacobar.123client.net" target="_blank" class="ponto-link active-effect">Espaço Bar</a>
-                <a href="https://espacobarracao.123client.net" target="_blank" class="ponto-link active-effect">Espaço Barracão</a>
-                <a href="https://espacodoiran.123client.net" target="_blank" class="ponto-link active-effect">Espaço Do Iran</a>
-                <a href="https://lidiavariedades.123client.net" target="_blank" class="ponto-link active-effect">Espaço Familia</a>
-                <a href="https://espacofamiliagurpar.123client.net" target="_blank" class="ponto-link active-effect">Espaço Família Gurpar</a>
-                <a href="https://espetariatialele.123client.net" target="_blank" class="ponto-link active-effect">Espetaria Tia Lele</a>
-                <a href="https://esquinadochurrasco.123client.net" target="_blank" class="ponto-link active-effect">Esquina Do Churrasco</a>
-                <a href="https://familiacarvalho.123client.net" target="_blank" class="ponto-link active-effect">Familia Carvalho</a>
-                <a href="https://familiaesquinabar.123client.net" target="_blank" class="ponto-link active-effect">Familia Esquina Bar</a>
-                <a href="https://kenodosavos.123client.net" target="_blank" class="ponto-link active-effect">Família Marinho</a>
-                <a href="https://feiradotroca.123client.net" target="_blank" class="ponto-link active-effect">Feira Do Troca</a>
-                <a href="https://felixbets.123client.net" target="_blank" class="ponto-link active-effect">Felix Bets</a>
-                <a href="https://fenixonline.123client.net" target="_blank" class="ponto-link active-effect">Fenix On-line</a>
-                <a href="https://fiteirodonaldo.123client.net" target="_blank" class="ponto-link active-effect">Fiteiro Do Naldo</a>
-                <a href="https://flamengo.123client.net" target="_blank" class="ponto-link active-effect">Flamengo</a>
-                <a href="https://lionbets.123client.net" target="_blank" class="ponto-link active-effect">Francisco Betsbola</a>
-                <a href="https://frangao.123client.net" target="_blank" class="ponto-link active-effect">Frangão</a>
-                <a href="https://frutariatreiscoracoes.123client.net" target="_blank" class="ponto-link active-effect">Frutaria 3 Coraçoes</a>
-                <a href="https://gamegol.123client.net" target="_blank" class="ponto-link active-effect">Game Gol</a>
-                <a href="https://gilracoes.123client.net" target="_blank" class="ponto-link active-effect">Gil Racoes</a>
-                <a href="https://girodasorte.123client.net" target="_blank" class="ponto-link active-effect">Giro Da Sorte</a>
-                <a href="https://gordinpix.123client.net" target="_blank" class="ponto-link active-effect">Gordin Do Pix</a>
-                <a href="https://gordindopix.123client.net" target="_blank" class="ponto-link active-effect">Gordin Do Pix</a>
-                <a href="https://guiadasorte.123client.net" target="_blank" class="ponto-link active-effect">Guia Da Sorte🍀</a>
-                <a href="https://gustavo.123client.net" target="_blank" class="ponto-link active-effect">Gustavo</a>
-                <a href="https://heitordoscortes.123client.net" target="_blank" class="ponto-link active-effect">Heitor Dos Cortes</a>
-                <a href="https://huck.123client.net" target="_blank" class="ponto-link active-effect">Huck</a>
-                <a href="https://isaacai.123client.net" target="_blank" class="ponto-link active-effect">Isa Açaí</a>
-                <a href="https://jandaiajogos.123client.net" target="_blank" class="ponto-link active-effect">Jandaia Jogos</a>
-                <a href="https://jardelpedras.123client.net" target="_blank" class="ponto-link active-effect">Jardel Pedras</a>
-                <a href="https://pracadobonfin.123client.net" target="_blank" class="ponto-link active-effect">Jc Sales</a>
-                <a href="https://joaobar.123client.net" target="_blank" class="ponto-link active-effect">Joao Bar</a>
-                <a href="https://joguemais.123client.net" target="_blank" class="ponto-link active-effect">Jogue Mais</a>
-                <a href="https://jorgemercado.123client.net" target="_blank" class="ponto-link active-effect">Jorge Mercado</a>
-                <a href="https://josebets.123client.net" target="_blank" class="ponto-link active-effect">Jose Bets</a>
-                <a href="https://josielcurticao.123client.net" target="_blank" class="ponto-link active-effect">Josiel Curtição</a>
-                <a href="https://josimarbets.123client.net" target="_blank" class="ponto-link active-effect">Josimar Bets</a>
-                <a href="https://josivanbets.123client.net" target="_blank" class="ponto-link active-effect">Josivan Bets</a>
-                <a href="https://jrbebidasjp.123client.net" target="_blank" class="ponto-link active-effect">Jr Bebidas - Jp</a>
-                <a href="https://jrconveniencia.123client.net" target="_blank" class="ponto-link active-effect">Jr Conveniencia</a>
-                <a href="https://jrlanches.123client.net" target="_blank" class="ponto-link active-effect">Jr Lanches</a>
-                <a href="https://kaiodasorte.123client.net" target="_blank" class="ponto-link active-effect">Kaio Da Sorte</a>
-                <a href="https://kaiquebacabinha.123client.net" target="_blank" class="ponto-link active-effect">Kaique Bacabinha</a>
-                <a href="https://kelle.123client.net" target="_blank" class="ponto-link active-effect">Kelle</a>
-                <a href="https://kenoaroeira.123client.net" target="_blank" class="ponto-link active-effect">Keno Aroeira</a>
-                <a href="https://kenodaluh.123client.net" target="_blank" class="ponto-link active-effect">Keno Da Luh</a>
-                <a href="https://kenodasandraa.123client.net" target="_blank" class="ponto-link active-effect">Keno Da Sandra</a>
-                <a href="https://kenodasortetv.123client.net" target="_blank" class="ponto-link active-effect">Keno Da Sorte</a>
-                <a href="https://kenodasorteslz.123client.net" target="_blank" class="ponto-link active-effect">Keno Da Sorte Slz🤑</a>
-                <a href="https://kenodoapollo.123client.net" target="_blank" class="ponto-link active-effect">Keno Do Amy</a>
-                <a href="https://kenodobarao.123client.net" target="_blank" class="ponto-link active-effect">Keno Do Barao</a>
-                <a href="https://mckeno.123client.net" target="_blank" class="ponto-link active-effect">Keno Do Bilu</a>
-                <a href="https://kenodolorin.123client.net" target="_blank" class="ponto-link active-effect">Keno Do Lorin</a>
-                <a href="https://kenodomalagueta.123client.net" target="_blank" class="ponto-link active-effect">Keno Do Malagueta</a>
-                <a href="https://lsjogos.123client.net" target="_blank" class="ponto-link active-effect">L's Jogos</a>
-                <a href="https://ljaguabranca.123client.net" target="_blank" class="ponto-link active-effect">L.j.agua Branca</a>
-                <a href="https://lanchonetegabi.123client.net" target="_blank" class="ponto-link active-effect">Lanchonete Gabi</a>
-                <a href="https://lasvegasbar.123client.net" target="_blank" class="ponto-link active-effect">Las Vegas Bar</a>
-                <a href="https://lealbebidas.123client.net" target="_blank" class="ponto-link active-effect">Leal Bebidas</a>
-                <a href="https://leidianelanches.123client.net" target="_blank" class="ponto-link active-effect">Leidiane Lanches</a>
-                <a href="https://liviabetscx.123client.net" target="_blank" class="ponto-link active-effect">Liviabets</a>
-                <a href="https://lojabardokeke.123client.net" target="_blank" class="ponto-link active-effect">Loja Bar Do Keke</a>
-                <a href="https://bardomicael.123client.net" target="_blank" class="ponto-link active-effect">Loja Bar Do Micael</a>
-                <a href="https://lojashirley.123client.net" target="_blank" class="ponto-link active-effect">Loja Da Shirley</a>
-                <a href="https://lojadavitoria.123client.net" target="_blank" class="ponto-link active-effect">Loja Da Vitoria</a>
-                <a href="https://lojadealmeidaoclub.123client.net" target="_blank" class="ponto-link active-effect">Loja De Almeidao Club</a>
-                <a href="https://lojadecorro.123client.net" target="_blank" class="ponto-link active-effect">Loja De Corro</a>
-                <a href="https://lojadejaicos.123client.net" target="_blank" class="ponto-link active-effect">Loja De Jaicos</a>
-                <a href="https://lojabelempiaui.123client.net" target="_blank" class="ponto-link active-effect">Loja Do Belem Do Piaui</a>
-                <a href="https://lojadocajueiro.123client.net" target="_blank" class="ponto-link active-effect">Loja Do Cajueiro</a>
-                <a href="https://lojadodajunco.123client.net" target="_blank" class="ponto-link active-effect">Loja Doda Junco</a>
-                <a href="https://lojagcinco.123client.net" target="_blank" class="ponto-link active-effect">Loja G5 Loterias</a>
-                <a href="https://lojagerminiano.123client.net" target="_blank" class="ponto-link active-effect">Loja Germiniano</a>
-                <a href="https://lojaitabe.123client.net" target="_blank" class="ponto-link active-effect">Loja Itambe</a>
-                <a href="https://lolobar.123client.net" target="_blank" class="ponto-link active-effect">Loló Bar</a>
-                <a href="https://lucineltonbets.123client.net" target="_blank" class="ponto-link active-effect">Lucinelton Bets</a>
-                <a href="https://leopizza.123client.net" target="_blank" class="ponto-link active-effect">Léo Pizza</a>
-                <a href="https://maicondasorte.123client.net" target="_blank" class="ponto-link active-effect">Maicon Da Sorte</a>
-                <a href="https://maludasorte.123client.net" target="_blank" class="ponto-link active-effect">Malu Da Sorte</a>
-                <a href="https://manancialbar.123client.net" target="_blank" class="ponto-link active-effect">Manancial Bar</a>
-                <a href="https://marrecasbar.123client.net" target="_blank" class="ponto-link active-effect">Marrecas Bar</a>
-                <a href="https://mauricioapostas.123client.net" target="_blank" class="ponto-link active-effect">Mauricio Apostas</a>
-                <a href="https://merctresirmaos.123client.net" target="_blank" class="ponto-link active-effect">Merc 3 Irmãos</a>
-                <a href="https://mercadinhodairene.123client.net" target="_blank" class="ponto-link active-effect">Mercadinho Da Irene</a>
-                <a href="https://mercadinholea.123client.net" target="_blank" class="ponto-link active-effect">Mercadinho L&a</a>
-                <a href="https://mercadinhoomoises.123client.net" target="_blank" class="ponto-link active-effect">Mercadinho O Moises</a>
-                <a href="https://mercadinhosuperbarato.123client.net" target="_blank" class="ponto-link active-effect">Mercadinho Super Barato</a>
-                <a href="https://mercantilsena.123client.net" target="_blank" class="ponto-link active-effect">Mercantil Sena</a>
-                <a href="https://merceariajari.123client.net" target="_blank" class="ponto-link active-effect">Mercearia Jari</a>
-                <a href="https://mikitabar.123client.net" target="_blank" class="ponto-link active-effect">Mikita Bar</a>
-                <a href="https://motobikemelo.123client.net" target="_blank" class="ponto-link active-effect">Motobike Melo</a>
-                <a href="https://mulhermaravilha.123client.net" target="_blank" class="ponto-link active-effect">Mulher Maravilha</a>
-                <a href="https://nanelanches.123client.net" target="_blank" class="ponto-link active-effect">Nane Lanches</a>
-                <a href="https://negodomudin.123client.net" target="_blank" class="ponto-link active-effect">Nego Do Mudin</a>
-                <a href="https://neguinbetszeroquatro.123client.net" target="_blank" class="ponto-link active-effect">Neguin Bets 04</a>
-                <a href="https://netosbar.123client.net" target="_blank" class="ponto-link active-effect">Neto's Bar</a>
-                <a href="https://noruegabets.123client.net" target="_blank" class="ponto-link active-effect">Noruega Bets</a>
-                <a href="https://paganahora.123client.net" target="_blank" class="ponto-link active-effect">Paga Na Hora</a>
-                <a href="https://panificadorasantos.123client.net" target="_blank" class="ponto-link active-effect">Panificadora Santos</a>
-                <a href="https://paradalanches.123client.net" target="_blank" class="ponto-link active-effect">Parada Lanches</a>
-                <a href="https://paulobebidas.123client.net" target="_blank" class="ponto-link active-effect">Paulo Bebidas</a>
-                <a href="https://pimpolho.123client.net" target="_blank" class="ponto-link active-effect">Pimpolho</a>
-                <a href="https://pointdoromero.123client.net" target="_blank" class="ponto-link active-effect">Point Do Romero</a>
-                <a href="https://pontodanena.123client.net" target="_blank" class="ponto-link active-effect">Ponto Da Nena</a>
-                <a href="https://pontodaval.123client.net" target="_blank" class="ponto-link active-effect">Ponto Da Val</a>
-                <a href="https://restorbardafran.123client.net" target="_blank" class="ponto-link active-effect">Ponto Rodoviaria Caxias</a>
-                <a href="https://povoadoalegredois.123client.net" target="_blank" class="ponto-link active-effect">Povoado Alegre 02</a>
-                <a href="https://quiosquecampoverde.123client.net" target="_blank" class="ponto-link active-effect">Quiosque Campo Verde</a>
-                <a href="https://raffaelapostas.123client.net" target="_blank" class="ponto-link active-effect">Raffael Apostas</a>
-                <a href="https://realbebidas.123client.net" target="_blank" class="ponto-link active-effect">Real Bebidas</a>
-                <a href="https://resenhasbar.123client.net" target="_blank" class="ponto-link active-effect">Resenhas Bar</a>
-                <a href="https://restaurantecaipira.123client.net" target="_blank" class="ponto-link active-effect">Restaurante Caipira</a>
-                <a href="https://rgbebidas.123client.net" target="_blank" class="ponto-link active-effect">Rg Bebidas</a>
-                <a href="https://ruandocremosinho.123client.net" target="_blank" class="ponto-link active-effect">Ruan Do Cremosinho</a>
-                <a href="https://saojeronimo.123client.net" target="_blank" class="ponto-link active-effect">Sao Jeronimo</a>
-                <a href="https://sedehenrique.123client.net" target="_blank" class="ponto-link active-effect">Sede Henrique</a>
-                <a href="https://snookballbar.123client.net" target="_blank" class="ponto-link active-effect">Snook Ball Bar</a>
-                <a href="https://snookebar.123client.net" target="_blank" class="ponto-link active-effect">Snooker Bar</a>
-                <a href="https://sorveteriadasofia.123client.net" target="_blank" class="ponto-link active-effect">Sorveteria Da Sofia</a>
-                <a href="https://sossegobar.123client.net" target="_blank" class="ponto-link active-effect">Sossego Bar</a>
-                <a href="https://sossegoprime.123client.net" target="_blank" class="ponto-link active-effect">Sossego Prime</a>
-                <a href="https://suzanabarum.123client.net" target="_blank" class="ponto-link active-effect">Suzana Bar1</a>
-                <a href="https://tanamao.123client.net" target="_blank" class="ponto-link active-effect">Ta Na Mao</a>
-                <a href="https://taylabets.123client.net" target="_blank" class="ponto-link active-effect">Tayla Bets</a>
-                <a href="https://thaylerdofernando.123client.net" target="_blank" class="ponto-link active-effect">Thayler Do Fernando</a>
-                <a href="https://thaynara.123client.net" target="_blank" class="ponto-link active-effect">Thaynara</a>
-                <a href="https://tiabina.123client.net" target="_blank" class="ponto-link active-effect">Tia Bina</a>
-                <a href="https://todahorabebidas.123client.net" target="_blank" class="ponto-link active-effect">Toda Hora Bebidas</a>
-                <a href="https://torcidasbar.123client.net" target="_blank" class="ponto-link active-effect">Torcidas Bar</a>
-                <a href="https://trailerbigsabor.123client.net" target="_blank" class="ponto-link active-effect">Treiler Big Sabor</a>
-                <a href="https://tropicalanches.123client.net" target="_blank" class="ponto-link active-effect">Tropical Lanches</a>
-                <a href="https://trezidelabets.123client.net" target="_blank" class="ponto-link active-effect">Trezidela Bets</a>
-                <a href="https://vemcomigobar.123client.net" target="_blank" class="ponto-link active-effect">Vem Comigo Bar</a>
-                <a href="https://verdeamarelo.123client.net" target="_blank" class="ponto-link active-effect">Verde Amarelo</a>
-                <a href="https://verdeamarelodezcx.123client.net" target="_blank" class="ponto-link active-effect">Verde Amarelo 010</a>
-                <a href="https://verdeamarelodois.123client.net" target="_blank" class="ponto-link active-effect">Verde Amarelo 02</a>
-                <a href="https://verdeamareloseis.123client.net" target="_blank" class="ponto-link active-effect">Verde Amarelo 06</a>
-                <a href="https://viniciuspiraja.123client.net" target="_blank" class="ponto-link active-effect">Vinicius Piraja</a>
-                <a href="https://zoyymbets.123client.net" target="_blank" class="ponto-link active-effect">Zoyym Bets</a>
+                <a href="https://trescoracoes.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">3 Corações</a>
+                <a href="https://adamadevermelho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">A Dama De Vermelho</a>
+                <a href="https://asorteesua.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">A Sorte É Sua</a>
+                <a href="https://adegadalu.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Adega Da Lu</a>
+                <a href="https://agoravai.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Agora Vai</a>
+                <a href="https://aguiadeourojogos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Aguia De Ouro Jogos</a>
+                <a href="https://albuquerquesbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Albuquerques Bar</a>
+                <a href="https://aldeiasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Aldeias Bar</a>
+                <a href="https://anadomilim.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ana Do Milim</a>
+                <a href="https://agelimbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Angelim Bar</a>
+                <a href="https://arenaalfredo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Arena Alfredo</a>
+                <a href="https://arenashow.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Arena Show</a>
+                <a href="https://aruerabar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Aruera Bar</a>
+                <a href="https://balaodaveneza.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Balão Da Veneza</a>
+                <a href="https://bancadajessi.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Banca Da Jessi</a>
+                <a href="https://bancadalayana.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Banca Da Layana</a>
+                <a href="https://baraltashoraspedreiras.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Altas Horas 02</a>
+                <a href="https://barbomclima.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Bom Clima</a>
+                <a href="https://barborabeber.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Bora Beber</a>
+                <a href="https://bardaarlene.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Arlene</a>
+                <a href="https://bardaedna.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Edna</a>
+                <a href="https://bardaester.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Ester</a>
+                <a href="https://bardafabiana.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Fabiana</a>
+                <a href="https://bardafranca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Franca</a>
+                <a href="https://bardahelp.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Help</a>
+                <a href="https://bardairene.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Irene</a>
+                <a href="https://bardakatia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Katia</a>
+                <a href="https://bardalayss.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Lays</a>
+                <a href="https://bardaleda.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Leda</a>
+                <a href="https://bardaloirinha.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Loirinha</a>
+                <a href="https://bardamariia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Maria</a>
+                <a href="https://barmariapovoado.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Maria Povoado Soturno</a>
+                <a href="https://bardamarines.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Marines</a>
+                <a href="https://bardamayara.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Mayara</a>
+                <a href="https://bardapatydois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Paty</a>
+                <a href="https://bardapituiba.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Pituiba</a>
+                <a href="https://bardapituibavd.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Pituiba Vd</a>
+                <a href="https://bardapretinha.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Pretinha</a>
+                <a href="https://bardaquiteria.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Quiteria</a>
+                <a href="https://bardarisoleta.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Risoleta</a>
+                <a href="https://bardasocorro.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Socorro</a>
+                <a href="https://bardasocorroum.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Socorro 1</a>
+                <a href="https://bardatapa.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Tapa</a>
+                <a href="https://bardatati.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Tati</a>
+                <a href="https://bardaterezadois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Tereza</a>
+                <a href="https://bardavitoria.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Da Vitória</a>
+                <a href="https://bardascoleguinhass.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Das Coleguinhas</a>
+                <a href="https://bardoarmando.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Armando</a>
+                <a href="https://bardobacabal.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Bacabal</a>
+                <a href="https://bardobine.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Bine</a>
+                <a href="https://bardobrendo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Brendo</a>
+                <a href="https://barcareca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Careca</a>
+                <a href="https://bardodalton.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Dalton</a>
+                <a href="https://bardodamiao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Damião</a>
+                <a href="https://bardodoca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Doca</a>
+                <a href="https://bardodude.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Dudé</a>
+                <a href="https://bardofabim.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Fabim</a>
+                <a href="https://bardofaixa.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Faixa</a>
+                <a href="https://bardogordo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Gordo</a>
+                <a href="https://bardoguaiamu.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Guaiamu</a>
+                <a href="https://bardohilton.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Hilton</a>
+                <a href="https://bardoilario.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Ilario</a>
+                <a href="https://bardojabuti.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Jabuti</a>
+                <a href="https://bardojailsondois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Jailson</a>
+                <a href="https://baardojoao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do João</a>
+                <a href="https://barjurandirkenobets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Jurandir Keno Bets</a>
+                <a href="https://bardokelson.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Kelson</a>
+                <a href="https://bardoleaokeno.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Leão</a>
+                <a href="https://barmarcao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Marcao</a>
+                <a href="https://bardonenem.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Nenem*</a>
+                <a href="https://bardopatriota.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Patriota</a>
+                <a href="https://barpescador.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Pescador</a>
+                <a href="https://bardoreal.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Real</a>
+                <a href="https://bardoselmim.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Selmim</a>
+                <a href="https://bardoseubarriga.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Seu Barriga</a>
+                <a href="https://bardosolon.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Solon</a>
+                <a href="https://bardosono.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Sono</a>
+                <a href="https://bardotete.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Tete</a>
+                <a href="https://bardovaldir.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Valdir</a>
+                <a href="https://bardovalmiir.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Valmir</a>
+                <a href="https://bardovanja.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Vanja</a>
+                <a href="https://bardowemerson.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Wemerson</a>
+                <a href="https://bardozeluis.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Ze Luis</a>
+                <a href="https://bardozeluiz.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Ze Luiz</a>
+                <a href="https://bardozevinvin.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Ze Vin Vin</a>
+                <a href="https://bardozemarianovo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Zé Maria Novo</a>
+                <a href="https://bardoindio.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Do Índio</a>
+                <a href="https://bardonacruz.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Dona Cruz</a>
+                <a href="https://bardosamigoos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Dos Amigos</a>
+                <a href="https://baredistra.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar E Dist R.a</a>
+                <a href="https://baremerceariadaana.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar E Mercearia Da Ana</a>
+                <a href="https://barmerceariage.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar E Mercearia Do Ge</a>
+                <a href="https://baracainordestino.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Joao Do Laço</a>
+                <a href="https://barjoaoprego.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar João Prego</a>
+                <a href="https://bardocarlim.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar O Carlim</a>
+                <a href="https://baroromario.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar O Romario</a>
+                <a href="https://barpiripompom.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Piripompom</a>
+                <a href="https://barpordosoldois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bar Por Do Sol</a>
+                <a href="https://barracadadoura.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Barracadadoura</a>
+                <a href="https://baxinhalanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Baxinha Lanches</a>
+                <a href="https://beiramar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Beira Mar</a>
+                <a href="https://berinjelasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Berinjelas Bar</a>
+                <a href="https://bernardo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bernardo</a>
+                <a href="https://betscastelobranco.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bets Castelo Branco</a>
+                <a href="https://betslanche.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bets Lanche</a>
+                <a href="https://bigodacigana.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bingo Da Cigana</a>
+                <a href="https://bingodafeira.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bingo Da Feira</a>
+                <a href="https://bingodoluck.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bingo Do Luck</a>
+                <a href="https://birocasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Biroscas Bar</a>
+                <a href="https://bismacbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bismac Bar</a>
+                <a href="https://bmcoveniencia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bm Conveniencia</a>
+                <a href="https://boemiosbardasueli.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boemios Bar Da Sueli</a>
+                <a href="https://bombacds.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Bomba Cds</a>
+                <a href="https://botecocasadamae.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Casa Da Mae</a>
+                <a href="https://botecodaheloisa.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Da Heloisa</a>
+                <a href="https://boteconenzinhadois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Da Nenzinha 02</a>
+                <a href="https://botecodobracinho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Do Bracinho</a>
+                <a href="https://botecodogordin.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Do Gordin</a>
+                <a href="https://botecodoreggae.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Do Reggae</a>
+                <a href="https://fuxiqueros.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Dos Fuxiqueros</a>
+                <a href="https://botecozite.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Boteco Zite</a>
+                <a href="https://botecodk.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Botecodk</a>
+                <a href="https://boxdafamilia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Box Da Familia</a>
+                <a href="https://boxdosamigos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Box Dos Amigos</a>
+                <a href="https://budegadoary.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Budega Do Ary</a>
+                <a href="https://burguerdez.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Burguer 10</a>
+                <a href="https://burropreto.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Burro Preto</a>
+                <a href="https://butecodomaruricio.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Buteco Do Maurício</a>
+                <a href="https://butecodoeldon.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Buteco Do Eldon</a>
+                <a href="https://bardamorena.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cabana Das Bebidas</a>
+                <a href="https://calangosbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Calangos Bar</a>
+                <a href="https://cantinhodasol.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cantinho Da Sol</a>
+                <a href="https://fortunekeno.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cantinho Da Sorte</a>
+                <a href="https://cantogelado.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cantogelado</a>
+                <a href="https://cededobotafogo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cede Do Botafogo</a>
+                <a href="https://cedrossorveteria.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cedros Sorveteria</a>
+                <a href="https://centralbayeux.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Central Bayeux</a>
+                <a href="https://centralgcincopicos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Central G5 Picos</a>
+                <a href="https://chopbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Chops Bar</a>
+                <a href="https://chryslay.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Chryslay</a>
+                <a href="https://chupechupe.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Chupe - Chupe</a>
+                <a href="https://churrasquinhodaelza.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Churrasquinho Da Elza</a>
+                <a href="https://churrasquinhodopaulinho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Churrasquinho Do Paulinho</a>
+                <a href="https://clubedapaz.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Clube Da Paz</a>
+                <a href="https://comercialalves.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Alves</a>
+                <a href="https://comerialgeycy.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Geycy</a>
+                <a href="https://comercialmateus.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Mateus</a>
+                <a href="https://comercialnovopointer.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Novo Pointer</a>
+                <a href="https://comercialpoty.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Poty</a>
+                <a href="https://comercialriita.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Comercial Rita</a>
+                <a href="https://convenienciainovacao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Conveniência Inovação</a>
+                <a href="https://corujadasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Coruja Da Sorte</a>
+                <a href="https://cristinajogos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cristina Jogos</a>
+                <a href="https://bancadozezeca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Cauany Keno</a>
+                <a href="https://degadamaria.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">D&g</a>
+                <a href="https://danieldafarinha.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Daniel Da Farina</a>
+                <a href="https://deliciasdasi.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Delicias Da Si</a>
+                <a href="https://descubra.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Descubra</a>
+                <a href="https://dianalaches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Diana Lanches</a>
+                <a href="https://dulcebar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Dulce Bar</a>
+                <a href="https://edinholorranbebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Edinho Lorran Bebidas</a>
+                <a href="https://eliasvip.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Elias Vip</a>
+                <a href="https://erlandiobets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Erlandio Bets</a>
+                <a href="https://espacobar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espaço Bar</a>
+                <a href="https://espacobarracao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espaço Barracão</a>
+                <a href="https://espacodoiran.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espaço Do Iran</a>
+                <a href="https://lidiavariedades.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espaço Familia</a>
+                <a href="https://espacofamiliagurpar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espaço Família Gurpar</a>
+                <a href="https://espetariatialele.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Espetaria Tia Lele</a>
+                <a href="https://esquinadochurrasco.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Esquina Do Churrasco</a>
+                <a href="https://familiacarvalho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Familia Carvalho</a>
+                <a href="https://familiaesquinabar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Familia Esquina Bar</a>
+                <a href="https://kenodosavos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Família Marinho</a>
+                <a href="https://feiradotroca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Feira Do Troca</a>
+                <a href="https://felixbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Felix Bets</a>
+                <a href="https://fenixonline.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Fenix On-line</a>
+                <a href="https://fiteirodonaldo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Fiteiro Do Naldo</a>
+                <a href="https://flamengo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Flamengo</a>
+                <a href="https://lionbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Francisco Betsbola</a>
+                <a href="https://frangao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Frangão</a>
+                <a href="https://frutariatreiscoracoes.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Frutaria 3 Coraçoes</a>
+                <a href="https://gamegol.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Game Gol</a>
+                <a href="https://gilracoes.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Gil Racoes</a>
+                <a href="https://girodasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Giro Da Sorte</a>
+                <a href="https://gordinpix.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Gordin Do Pix</a>
+                <a href="https://gordindopix.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Gordin Do Pix</a>
+                <a href="https://guiadasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Guia Da Sorte🍀</a>
+                <a href="https://gustavo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Gustavo</a>
+                <a href="https://heitordoscortes.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Heitor Dos Cortes</a>
+                <a href="https://huck.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Huck</a>
+                <a href="https://isaacai.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Isa Açaí</a>
+                <a href="https://jandaiajogos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jandaia Jogos</a>
+                <a href="https://jardelpedras.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jardel Pedras</a>
+                <a href="https://pracadobonfin.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jc Sales</a>
+                <a href="https://joaobar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Joao Bar</a>
+                <a href="https://joguemais.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jogue Mais</a>
+                <a href="https://jorgemercado.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jorge Mercado</a>
+                <a href="https://josebets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jose Bets</a>
+                <a href="https://josielcurticao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Josiel Curtição</a>
+                <a href="https://josimarbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Josimar Bets</a>
+                <a href="https://josivanbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Josivan Bets</a>
+                <a href="https://jrbebidasjp.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jr Bebidas - Jp</a>
+                <a href="https://jrconveniencia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jr Conveniencia</a>
+                <a href="https://jrlanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Jr Lanches</a>
+                <a href="https://kaiodasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Kaio Da Sorte</a>
+                <a href="https://kaiquebacabinha.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Kaique Bacabinha</a>
+                <a href="https://kelle.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Kelle</a>
+                <a href="https://kenoaroeira.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Aroeira</a>
+                <a href="https://kenodaluh.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Da Luh</a>
+                <a href="https://kenodasandraa.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Da Sandra</a>
+                <a href="https://kenodasortetv.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Da Sorte</a>
+                <a href="https://kenodasorteslz.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Da Sorte Slz🤑</a>
+                <a href="https://kenodoapollo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Do Amy</a>
+                <a href="https://kenodobarao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Do Barao</a>
+                <a href="https://mckeno.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Do Bilu</a>
+                <a href="https://kenodolorin.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Do Lorin</a>
+                <a href="https://kenodomalagueta.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Keno Do Malagueta</a>
+                <a href="https://lsjogos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">L's Jogos</a>
+                <a href="https://ljaguabranca.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">L.j.agua Branca</a>
+                <a href="https://lanchonetegabi.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Lanchonete Gabi</a>
+                <a href="https://lasvegasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Las Vegas Bar</a>
+                <a href="https://lealbebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Leal Bebidas</a>
+                <a href="https://leidianelanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Leidiane Lanches</a>
+                <a href="https://liviabetscx.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Liviabets</a>
+                <a href="https://lojabardokeke.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Bar Do Keke</a>
+                <a href="https://bardomicael.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Bar Do Micael</a>
+                <a href="https://lojashirley.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Da Shirley</a>
+                <a href="https://lojadavitoria.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Da Vitoria</a>
+                <a href="https://lojadealmeidaoclub.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja De Almeidao Club</a>
+                <a href="https://lojadecorro.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja De Corro</a>
+                <a href="https://lojadejaicos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja De Jaicos</a>
+                <a href="https://lojabelempiaui.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Do Belem Do Piaui</a>
+                <a href="https://lojadocajueiro.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Do Cajueiro</a>
+                <a href="https://lojadodajunco.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Doda Junco</a>
+                <a href="https://lojagcinco.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja G5 Loterias</a>
+                <a href="https://lojagerminiano.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Germiniano</a>
+                <a href="https://lojaitabe.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loja Itambe</a>
+                <a href="https://lolobar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Loló Bar</a>
+                <a href="https://lucineltonbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Lucinelton Bets</a>
+                <a href="https://leopizza.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Léo Pizza</a>
+                <a href="https://maicondasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Maicon Da Sorte</a>
+                <a href="https://maludasorte.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Malu Da Sorte</a>
+                <a href="https://manancialbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Manancial Bar</a>
+                <a href="https://marrecasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Marrecas Bar</a>
+                <a href="https://mauricioapostas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mauricio Apostas</a>
+                <a href="https://merctresirmaos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Merc 3 Irmãos</a>
+                <a href="https://mercadinhodairene.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercadinho Da Irene</a>
+                <a href="https://mercadinholea.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercadinho L&a</a>
+                <a href="https://mercadinhoomoises.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercadinho O Moises</a>
+                <a href="https://mercadinhosuperbarato.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercadinho Super Barato</a>
+                <a href="https://mercantilsena.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercantil Sena</a>
+                <a href="https://merceariajari.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mercearia Jari</a>
+                <a href="https://mikitabar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mikita Bar</a>
+                <a href="https://motobikemelo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Motobike Melo</a>
+                <a href="https://mulhermaravilha.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Mulher Maravilha</a>
+                <a href="https://nanelanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Nane Lanches</a>
+                <a href="https://negodomudin.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Nego Do Mudin</a>
+                <a href="https://neguinbetszeroquatro.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Neguin Bets 04</a>
+                <a href="https://netosbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Neto's Bar</a>
+                <a href="https://noruegabets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Noruega Bets</a>
+                <a href="https://paganahora.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Paga Na Hora</a>
+                <a href="https://panificadorasantos.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Panificadora Santos</a>
+                <a href="https://paradalanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Parada Lanches</a>
+                <a href="https://paulobebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Paulo Bebidas</a>
+                <a href="https://pimpolho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Pimpolho</a>
+                <a href="https://pointdoromero.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Point Do Romero</a>
+                <a href="https://pontodanena.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ponto Da Nena</a>
+                <a href="https://pontodaval.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ponto Da Val</a>
+                <a href="https://restorbardafran.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ponto Rodoviaria Caxias</a>
+                <a href="https://povoadoalegredois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Povoado Alegre 02</a>
+                <a href="https://quiosquecampoverde.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Quiosque Campo Verde</a>
+                <a href="https://raffaelapostas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Raffael Apostas</a>
+                <a href="https://realbebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Real Bebidas</a>
+                <a href="https://resenhasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Resenhas Bar</a>
+                <a href="https://restaurantecaipira.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Restaurante Caipira</a>
+                <a href="https://rgbebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Rg Bebidas</a>
+                <a href="https://ruandocremosinho.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ruan Do Cremosinho</a>
+                <a href="https://saojeronimo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Sao Jeronimo</a>
+                <a href="https://sedehenrique.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Sede Henrique</a>
+                <a href="https://snookballbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Snook Ball Bar</a>
+                <a href="https://snookebar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Snooker Bar</a>
+                <a href="https://sorveteriadasofia.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Sorveteria Da Sofia</a>
+                <a href="https://sossegobar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Sossego Bar</a>
+                <a href="https://sossegoprime.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Sossego Prime</a>
+                <a href="https://suzanabarum.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Suzana Bar1</a>
+                <a href="https://tanamao.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Ta Na Mao</a>
+                <a href="https://taylabets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Tayla Bets</a>
+                <a href="https://thaylerdofernando.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Thayler Do Fernando</a>
+                <a href="https://thaynara.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Thaynara</a>
+                <a href="https://tiabina.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Tia Bina</a>
+                <a href="https://todahorabebidas.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Toda Hora Bebidas</a>
+                <a href="https://torcidasbar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Torcidas Bar</a>
+                <a href="https://trailerbigsabor.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Treiler Big Sabor</a>
+                <a href="https://tropicalanches.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Tropical Lanches</a>
+                <a href="https://trezidelabets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Trezidela Bets</a>
+                <a href="https://vemcomigobar.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Vem Comigo Bar</a>
+                <a href="https://verdeamarelo.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Verde Amarelo</a>
+                <a href="https://verdeamarelodezcx.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Verde Amarelo 010</a>
+                <a href="https://verdeamarelodois.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Verde Amarelo 02</a>
+                <a href="https://verdeamareloseis.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Verde Amarelo 06</a>
+                <a href="https://viniciuspiraja.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Vinicius Piraja</a>
+                <a href="https://zoyymbets.123client.net" target="_blank" rel="noopener" class="ponto-link active-effect">Zoyym Bets</a>
             </div>
             
             <div class="text-center mt-5">
-                <a href="https://wa.me/5586999900396" target="_blank" class="btn-secondary btn-large pulse-animation" style="margin-top: 20px; display: inline-flex; align-items: center; justify-content: center; color: #00C853; border-color: #00C853;">QUERO SER UM PONTO DE VENDA</a>
+                <a href="https://wa.me/5586999900396" target="_blank" rel="noopener" class="btn-secondary btn-large pulse-animation" style="margin-top: 20px; display: inline-flex; align-items: center; justify-content: center; color: #00C853; border-color: #00C853;">QUERO SER UM PONTO DE VENDA</a>
             </div>
         </div>
     </section>
@@ -449,7 +465,7 @@
         <div class="container text-center">
             <h2>Não Perca Tempo, Comece a Jogar Agora!</h2>
             <p class="cta-subtitle">Milhares de jogadores já estão se divertindo e ganhando. Junte-se à comunidade Kenobingo!</p>
-            <a href="https://kenobingo.123client.net" target="_blank" class="btn-primary btn-large pulse-animation" style="border-color: #FFFFFF;">JOGAR AGORA</a>
+            <a href="https://kenobingo.123client.net" target="_blank" rel="noopener" class="btn-primary btn-large pulse-animation" style="border-color: #FFFFFF;">JOGAR AGORA</a>
         </div>
     </section>
 
@@ -465,15 +481,15 @@
                 <div class="contact-item fade-in active-effect">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/5586999900396" target="_blank" style="color: inherit;">(86) 99990-0396</a></p>
+                    <p><a href="https://wa.me/5586999900396" target="_blank" rel="noopener" style="color: inherit;">(86) 99990-0396</a></p>
                 </div>
                 <div class="contact-item fade-in active-effect">
                     <i class="fas fa-users"></i>
                     <h3>Grupo VIP</h3>
                     <p style="margin-bottom: 20px;">Acompanhe os sorteios e premiações!</p>
                     <div style="display: flex; gap: 10px; justify-content: center;">
-                        <a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank" class="btn-social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="https://t.me/kenobingo" target="_blank" class="btn-social-telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                        <a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank" rel="noopener" class="btn-social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://t.me/kenobingo" target="_blank" rel="noopener" class="btn-social-telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
                     </div>
                 </div>
             </div>
@@ -484,7 +500,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col text-center-mobile">
-                    <img src="LOGOMARCA.jpg" alt="Logo Kenobingo" style="height: 40px; width: auto; margin-bottom: 15px;">
+                    <img src="logo-header.jpg" alt="Logo Kenobingo" width="143" height="120" loading="lazy" style="height: 40px; width: auto; margin-bottom: 15px;">
                     <p>Sua plataforma de jogos online com diversão garantida e prêmios incríveis.</p>
                 </div>
                 <div class="footer-col text-center-mobile">
@@ -494,17 +510,18 @@
                         <li><a href="#how-it-works">Como Funciona</a></li>
                         <li><a href="#pontos-online">Pontos Online</a></li>
                         <li><a href="#contact">Contato</a></li>
-                        <li><a href="https://kenobingo.123client.net" target="_blank">Jogar Agora</a></li>
+                        <li><a href="https://kenobingo.123client.net" target="_blank" rel="noopener">Jogar Agora</a></li>
                     </ul>
                 </div>
                 <div class="footer-col text-center-mobile">
                     <h3>Siga-nos</h3>
                     <div class="footer-social-icons">
-                        <a href="https://www.twitch.tv/livekenobingo" target="_blank"><i class="fab fa-twitch"></i></a>
-                        <a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://t.me/kenobingo" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="https://www.youtube.com/@livekenobingo" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/livekenobingo/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" aria-label="Kick"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></a>
+                        <a href="https://www.twitch.tv/livekenobingo" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+                        <a href="https://chat.whatsapp.com/LRn0pf3Jx63C8PQa5huts5?mode=gi_t" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://t.me/kenobingo" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/@livekenobingo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/livekenobingo/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -523,7 +540,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <span>Pontos</span>
         </a>
-        <a href="https://kenobingo.123client.net" target="_blank" class="bottom-nav-item btn-jogar-bottom">
+        <a href="https://kenobingo.123client.net" target="_blank" rel="noopener" class="bottom-nav-item btn-jogar-bottom">
             <div class="btn-jogar-inner pulse-animation">
                 <i class="fas fa-gamepad"></i>
                 <span>JOGAR</span>
@@ -542,7 +559,7 @@
     <div id="pwa-prompt" class="pwa-prompt" style="display: none;">
         <div class="pwa-content">
             <span class="pwa-close" id="pwa-close-btn">&times;</span>
-            <img src="icone-app.jpg" alt="Ícone Kenobingo" class="pwa-icon">
+            <img src="icon-192.png" alt="Ícone Kenobingo" class="pwa-icon">
             <h3 style="color: white; margin-bottom: 5px;">Instale o Kenobingo</h3>
             <p style="font-size: 14px; color: #a0aab2; margin-bottom: 15px;">Adicione à sua tela inicial para acessar como um app!</p>
             <div id="pwa-ios-instructions" style="display: none; text-align: left; font-size: 13px; background: #1A1A2E; padding: 15px; border-radius: 8px; color: white;">
@@ -556,6 +573,14 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="live-picker" id="live-picker" hidden>
+        <div class="live-picker-box" role="dialog" aria-label="Escolha onde assistir ao vivo">
+            <button type="button" class="live-picker-close" aria-label="Fechar">&times;</button>
+            <a href="https://kick.com/livekenobingo" target="_blank" rel="noopener" class="live-opt live-opt-kick"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg> Assistir na Kick</a>
+            <a href="https://www.twitch.tv/livekenobingo" target="_blank" rel="noopener" class="live-opt live-opt-twitch"><i class="fab fa-twitch"></i> Assistir na Twitch</a>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
 </body>
 </html>

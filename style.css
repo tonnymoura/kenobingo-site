@@ -187,3 +187,59 @@ h2 { font-size: 2.5em; margin-bottom: 0.8em; text-align: center; }
     /* Força os botões de ação a terem 100% da largura máxima para não ficarem tortos */
     .btn-primary, .btn-secondary { width: 100%; max-width: 300px; margin: 0 auto; } 
 }
+
+/* =========================================
+   KICK + TWITCH (escolha de transmissão)
+   ========================================= */
+.kick-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; fill: currentColor; }
+.step-icons svg.kick-icon { fill: #53FC18; }
+.header-social-icons a, .footer-social-icons a { display: inline-flex; align-items: center; }
+.step-icons { display: flex; justify-content: center; align-items: center; gap: 18px; margin-bottom: 15px; }
+.step-icons .kick-icon { width: 2.6em; height: 2.6em; }
+.step-icons i { font-size: 2.6em; margin-bottom: 0; }
+
+.btn-kick { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 12px 25px; border-radius: 30px; font-weight: 600; text-transform: uppercase; text-align: center; transition: 0.3s; cursor: pointer; background-color: transparent; color: #53FC18; border: 2px solid #53FC18; }
+.btn-kick.btn-large { padding: 15px 35px; font-size: 1.1em; }
+.btn-kick:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.btn-twitch { color: #9146FF; border-color: #9146FF; }
+/* Botões do início em triângulo: Jogar Agora no topo, Kick e Twitch embaixo lado a lado */
+.hero-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; max-width: 480px; }
+.hero-buttons .btn-primary, .hero-buttons .btn-kick, .hero-buttons .btn-secondary { width: 100%; max-width: none; margin: 0; box-sizing: border-box; padding: 15px 10px; font-size: 1em; white-space: nowrap; }
+.hero-buttons .btn-primary { grid-column: 1 / -1; justify-self: center; width: calc(50% - 7.5px); }
+@media (max-width: 992px) { .hero-buttons { margin: 0 auto; } }
+/* Celular: um embaixo do outro */
+@media (max-width: 600px) {
+    .hero-buttons { grid-template-columns: 1fr; max-width: 300px; }
+    .hero-buttons .btn-primary { width: 100%; }
+}
+
+.live-picker[hidden] { display: none; }
+.live-picker-box { display: flex; flex-direction: column; gap: 10px; }
+.live-opt { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; border-radius: 12px; font-weight: 700; white-space: nowrap; transition: 0.2s; }
+.live-opt:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.live-opt-kick { background: #53FC18; color: #111; }
+.live-opt-twitch { background: #9146FF; color: #fff; }
+.live-picker-close { display: none; }
+
+/* Desktop: menu suspenso */
+@media (min-width: 993px) {
+    .live-picker { position: fixed; z-index: 2000; }
+    .live-picker-box { background: #1b1b33; padding: 10px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+}
+/* Celular: modal centralizado */
+@media (max-width: 992px) {
+    .live-picker { position: fixed; inset: 0; z-index: 3000; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .live-picker[hidden] { display: none; }
+    .live-picker-box { position: relative; width: 100%; max-width: 320px; background: #1b1b33; padding: 50px 20px 20px; border-radius: 18px; gap: 14px; }
+    .live-opt { padding: 18px 20px; font-size: 1.1em; }
+    .live-picker-close { display: block; position: absolute; top: 8px; right: 12px; background: none; border: 0; color: #fff; font-size: 2em; line-height: 1; cursor: pointer; padding: 4px 8px; }
+}
+@media (max-width: 600px) {
+    .btn-kick { width: 100%; max-width: 300px; margin: 0 auto; }
+}
+
+
+/* Fale Conosco: cards centralizados e botões do Grupo VIP menores */
+.contact-item { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.contact-item .btn-social-whatsapp, .contact-item .btn-social-telegram { padding: 8px 12px; font-size: 0.85em; border-radius: 8px; gap: 6px; }
+.contact-item .btn-social-whatsapp i, .contact-item .btn-social-telegram i { font-size: 1.2em; color: #fff; margin-bottom: 0; }
