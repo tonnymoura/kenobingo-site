@@ -1,30 +1,166 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ==========================================
-    // 1. LÓGICA DO EFEITO SANFONA (PONTOS ONLINE)
+    // 1. LÓGICA DO EFEITO SANFONA E BUSCA (PONTOS ONLINE)
     // ==========================================
     const btnTogglePontos = document.getElementById('btn-toggle-pontos');
     const listaPontos = document.getElementById('lista-pontos');
+    const inputBusca = document.getElementById('busca-ponto');
+    const btnLimparBusca = document.getElementById('limpar-busca');
+    const contadorPontos = document.getElementById('pontos-contador');
+    const avisoVazio = document.getElementById('pontos-vazio');
+    const cardAdquiraCartela = document.getElementById('card-adquira-cartela');
+
+    const normalizarTexto = (str) =>
+        (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    const atualizarBotaoSanfona = (aberto) => {
+        if (!btnTogglePontos) return;
+        if (aberto) {
+            btnTogglePontos.innerHTML = '<i class="fas fa-times"></i> Ocultar Pontos';
+            btnTogglePontos.style.backgroundColor = 'transparent';
+            btnTogglePontos.style.color = '#FF007F';
+        } else {
+            btnTogglePontos.innerHTML = '<i class="fas fa-map-marker-alt"></i> Mostrar Todos os Pontos';
+            btnTogglePontos.style.backgroundColor = '#FF007F';
+            btnTogglePontos.style.color = '#FFFFFF';
+        }
+    };
 
     if (btnTogglePontos && listaPontos) {
         btnTogglePontos.addEventListener('click', () => {
-            // Liga/Desliga a classe 'open' que mostra a grade no CSS
-            listaPontos.classList.toggle('open');
-            
-            // Troca o visual do botão dependendo do estado
-            if (listaPontos.classList.contains('open')) {
-                btnTogglePontos.innerHTML = '<i class="fas fa-times"></i> Ocultar Pontos';
-                btnTogglePontos.style.backgroundColor = 'transparent';
-                btnTogglePontos.style.color = '#FF007F';
-            } else {
-                btnTogglePontos.innerHTML = '<i class="fas fa-map-marker-alt"></i> Mostrar Todos os Pontos';
-                btnTogglePontos.style.backgroundColor = '#FF007F';
-                btnTogglePontos.style.color = '#FFFFFF';
-                
-                // Sobe a tela de volta pro topo da seção caso a pessoa tenha rolado muito
+            const aberto = listaPontos.classList.toggle('open');
+            atualizarBotaoSanfona(aberto);
+            if (!aberto) {
                 document.getElementById('accordion-container').scrollIntoView({ behavior: 'smooth' });
             }
         });
+    }
+
+    if (listaPontos && inputBusca) {
+        const linksPontos = Array.from(listaPontos.querySelectorAll('.ponto-link'));
+        const totalPontos = linksPontos.length;
+        const dadosPontos = linksPontos.map((el) => ({
+            el,
+            texto: normalizarTexto(el.textContent)
+        }));
+
+        const filtrarPontos = () => {
+            const termo = normalizarTexto(inputBusca.value.trim());
+            if (btnLimparBusca) btnLimparBusca.hidden = !termo;
+
+            if (termo && !listaPontos.classList.contains('open')) {
+                listaPontos.classList.add('open');
+                atualizarBotaoSanfona(true);
+            }
+
+            let visiveis = 0;
+            dadosPontos.forEach(({ el, texto }) => {
+                const bate = !termo || texto.includes(termo);
+                el.hidden = !bate;
+                if (bate) visiveis++;
+            });
+
+            if (contadorPontos) {
+                contadorPontos.textContent = termo
+                    ? `${visiveis} de ${totalPontos} pontos encontrados`
+                    : `${totalPontos} pontos oficiais disponíveis`;
+            }
+            if (avisoVazio) {
+                avisoVazio.hidden = visiveis > 0;
+            }
+        };
+
+        inputBusca.addEventListener('input', filtrarPontos);
+        if (btnLimparBusca) {
+            btnLimparBusca.addEventListener('click', () => {
+                inputBusca.value = '';
+                filtrarPontos();
+                inputBusca.focus();
+            });
+        }
+        filtrarPontos();
+    }
+
+    if (cardAdquiraCartela && listaPontos) {
+        cardAdquiraCartela.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!listaPontos.classList.contains('open')) {
+                listaPontos.classList.add('open');
+                atualizarBotaoSanfona(true);
+            }
+            const secaoPontos = document.getElementById('pontos-online');
+            if (secaoPontos) secaoPontos.scrollIntoView({ behavior: 'smooth' });
+            if (inputBusca) {
+                setTimeout(() => inputBusca.focus({ preventScroll: true }), 450);
+            }
+        });
+    }
+
+    // ==========================================
+    // 1.1 STATUS DAS RODADAS (SALA 214 KENO + SALA 568 SUPER — HORÁRIO DE BRASÍLIA)
+    // ==========================================
+    const statusDot = document.getElementById('round-status-dot');
+    const statusText = document.getElementById('round-status-text');
+
+    if (statusDot && statusText) {
+        // Grade Terça a Sábado (Sala 214 KENO + entradas SUPER):
+        // 08:00 às 10:00 -> a cada 30 min (08:00, 08:30, 09:00, 09:30, 10:00)
+        // 10:00 às 22:00 -> a cada 15 min (com pausa às 20:45 de Ter a Sex e às 19:45 na Qua/Sáb)
+        const construirGradeDia = (diaSemana) => {
+            // Domingo (0) e Segunda-feira (1): operação 100% na Sala 568 (SUPER) das 10:00 (600) às 23:45 (1425)
+            if (diaSemana === 0 || diaSemana === 1) {
+                const gradeSuper = [];
+                for (let t = 600; t <= 1425; t += 15) {
+                    if (t !== 1185) gradeSuper.push(t); // pausa às 19:45 (1185) antes da 20:00★
+                }
+                return gradeSuper;
+            }
+
+            // Terça (2) a Sábado (6): começa às 08:00 (480) de 30 em 30 min até 10:00 (600), depois de 15 em 15 min até 22:00 (1320)
+            const grade214 = [480, 510, 540, 570];
+            for (let t = 600; t <= 1320; t += 15) {
+                // Quarta (3) e Sábado (6) pausam às 19:45 (1185) antes da Super Rodada das 20:00★
+                if ((diaSemana === 3 || diaSemana === 6) && t === 1185) continue;
+                // Terça a Sexta (2..5) pausam às 20:45 (1245) antes da Rodada Nobre das 21:00★
+                if (diaSemana >= 2 && diaSemana <= 5 && t === 1245) continue;
+                grade214.push(t);
+            }
+            return grade214;
+        };
+
+        const atualizarStatusRodada = () => {
+            const agora = new Date();
+            // Converter para horário de Brasília (UTC-3)
+            const utcMs = agora.getTime() + agora.getTimezoneOffset() * 60000;
+            const brt = new Date(utcMs - 3 * 3600000);
+            const diaSemana = brt.getDay(); // 0=Dom, 1=Seg, ..., 6=Sáb
+            const h = brt.getHours();
+            const m = brt.getMinutes();
+            const minDia = h * 60 + m;
+
+            const gradeHoje = construirGradeDia(diaSemana);
+            const inicioDia = gradeHoje[0];
+            const fimDia = gradeHoje[gradeHoje.length - 1];
+
+            if (minDia >= inicioDia && minDia <= fimDia) {
+                const proxMinTotal = gradeHoje.find((t) => t >= minDia) || fimDia;
+                const faltam = proxMinTotal - minDia;
+                const proxH = String(Math.floor(proxMinTotal / 60)).padStart(2, '0');
+                const proxM = String(proxMinTotal % 60).padStart(2, '0');
+
+                statusDot.classList.add('live');
+                statusText.textContent = faltam === 0
+                    ? `Rodada das ${proxH}:${proxM}h em andamento`
+                    : `Próxima rodada às ${proxH}:${proxM}h (${faltam} min)`;
+            } else {
+                statusDot.classList.remove('live');
+                statusText.textContent = 'Sorteios diários das 08:00h às 23:45h';
+            }
+        };
+
+        atualizarStatusRodada();
+        setInterval(atualizarStatusRodada, 30000);
     }
 
     // ==========================================
