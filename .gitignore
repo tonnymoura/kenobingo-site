@@ -1,2 +1,8 @@
 .DS_Store
 *.backup-*
+
+# Documentacao interna (contexto, acesso ao servidor, analises): nao publicar
+CONTEXTO.md
+CLAUDE.md
+*.pdf
+*.csv
