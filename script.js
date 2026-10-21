@@ -37,13 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Os pontos podem ser trocados depois do carregamento (lista vinda do sistema, ver 1.0):
+    // quem troca chama window.recarregarPontos() para refazer a busca e o contador.
+    window.recarregarPontos = () => {};
+
     if (listaPontos && inputBusca) {
-        const linksPontos = Array.from(listaPontos.querySelectorAll('.ponto-link'));
-        const totalPontos = linksPontos.length;
-        const dadosPontos = linksPontos.map((el) => ({
-            el,
-            texto: normalizarTexto(el.textContent)
-        }));
+        let totalPontos = 0;
+        let dadosPontos = [];
+        const lerPontos = () => {
+            const linksPontos = Array.from(listaPontos.querySelectorAll('.ponto-link'));
+            totalPontos = linksPontos.length;
+            dadosPontos = linksPontos.map((el) => ({
+                el,
+                texto: normalizarTexto(el.textContent)
+            }));
+        };
+        lerPontos();
 
         const filtrarPontos = () => {
             const termo = normalizarTexto(inputBusca.value.trim());
@@ -80,6 +89,42 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         filtrarPontos();
+        window.recarregarPontos = () => { lerPontos(); filtrarPontos(); };
+    }
+
+    // ==========================================
+    // 1.0 LISTA DE PONTOS VINDA DO SISTEMA (pontos-kenobingo.json)
+    // A lista fixa do HTML continua como reserva: se o sistema estiver fora do ar ou devolver algo
+    // suspeito, nada muda na tela.
+    // ==========================================
+    const URL_PONTOS = 'https://manutencao.jmdiversoes.com/publico/pontos-kenobingo.json';
+    const LINK_PONTO_VALIDO = /^https:\/\/[a-z0-9-]+\.123client\.net$/;
+    const MINIMO_PONTOS = 50;
+
+    if (listaPontos && typeof fetch === 'function') {
+        fetch(URL_PONTOS, { cache: 'no-cache' })
+            .then((r) => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))))
+            .then((dados) => {
+                const pontos = ((dados && dados.pontos) || []).filter(
+                    (p) => p && typeof p.nome === 'string' && p.nome.trim() && LINK_PONTO_VALIDO.test(String(p.link))
+                );
+                if (pontos.length < MINIMO_PONTOS) return;
+
+                const fragmento = document.createDocumentFragment();
+                pontos.forEach((p) => {
+                    const a = document.createElement('a');
+                    a.href = p.link;
+                    a.target = '_blank';
+                    a.rel = 'noopener';
+                    a.className = 'ponto-link active-effect';
+                    a.textContent = p.nome.trim();
+                    fragmento.appendChild(a);
+                });
+                listaPontos.querySelectorAll('.ponto-link').forEach((el) => el.remove());
+                listaPontos.appendChild(fragmento);
+                window.recarregarPontos();
+            })
+            .catch(() => { /* mantém a lista fixa do HTML */ });
     }
 
     if (cardAdquiraCartela && listaPontos) {
